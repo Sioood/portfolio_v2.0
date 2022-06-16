@@ -1,0 +1,37 @@
+// colors
+
+@import "./mixins";
+
+$--main-color: --main-color;
+$--secondary-color: --secondary-color;
+$--accent-color: --accent-color;
+
+
+/**
+ * Main theme
+ */
+
+$theme-map-dark: (
+  $--main-color: #000,
+  $--secondary-color: #fff,
+  $--accent-color: #e63b3b,
+);
+
+/**
+ * Second theme -> Light
+ */
+
+$theme-map-light: (
+  $--main-color: #fff,
+  $--secondary-color: #000,
+  $--accent-color: #e63b3b,
+);
+
+// fonts
+// first font
+
+$garcia-marquez: "GarciaMarquez";
+
+// second font
+
+$aileron: "Aileron";

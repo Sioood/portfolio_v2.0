@@ -1,0 +1,115 @@
+@import "./base/fonts";
+@import "./base/reset";
+@import "./utils/placeholder";
+@import "./utils/variables";
+@import "./utils/mixins";
+
+:root {
+  font-size: 16px;
+}
+
+:root {
+  @include spread-map($theme-map-dark);
+}
+:root.light {
+  @include spread-map($theme-map-light);
+}
+
+/**
+ * scrollbar
+ */
+
+::-webkit-scrollbar {
+  width: 2px;
+  height: 2px;
+}
+::-webkit-scrollbar-button {
+  width: 0px;
+  height: 0px;
+}
+::-webkit-scrollbar-thumb {
+  background: var($--secondary-color);
+  border: 0px none var($--secondary-color);
+  border-radius: 100px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var($--secondary-color);
+}
+::-webkit-scrollbar-thumb:active {
+  background: var($--main-color);
+}
+::-webkit-scrollbar-track {
+  background: var($--main-color);
+  border: 0px none var($--secondary-color);
+  border-radius: 0px;
+}
+::-webkit-scrollbar-track:hover {
+  background: var($--main-color);
+}
+::-webkit-scrollbar-track:active {
+  background: #525252;
+}
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+/**
+ * selection
+ */
+
+::-moz-selection {
+  /* Code for Firefox */
+  color: var($--main-color);
+  background: var($--accent-color);
+}
+
+::selection {
+  color: var($--main-color);
+  background: var($--accent-color);
+}
+
+* {
+  scroll-behavior: smooth;
+  /**
+   * Transition for theme change
+   */
+
+  transition: background 1s ease-in-out, color 0.1s ease-in-out;
+}
+
+html {
+  background: var($--main-color);
+  overflow-x: hidden;
+}
+
+// body {
+//   background: var($--main-color);
+// }
+
+/**
+ * headers
+ */
+
+h1 {
+  font-size: 5.378rem;
+}
+
+h2 {
+  font-size: 3.842rem;
+}
+
+h3 {
+  font-size: 2.744rem;
+}
+
+h4 {
+  font-size: 1.96rem;
+}
+
+h5 {
+  font-size: 1.4rem;
+}
+
+h6 {
+  font-size: 1rem;
+}
