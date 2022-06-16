@@ -1,6 +1,6 @@
 <template>
-  <button v-if="!link" :class="'button  button--' + type">{{ text }}</button>
-  <a v-else target="_blank" :href="link" :class="'button  button--' + type">{{
+  <button v-if="!link" :class="'link button  button--' + type">{{ text }}</button>
+  <a v-else target="_blank" :href="link" :class="'link button  button--' + type">{{
     text
   }}</a>
 </template>

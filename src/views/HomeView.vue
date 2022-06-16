@@ -1,17 +1,43 @@
 <template>
   <div @scroll="easterEgg()" class="page home">
     <section class="home" @mouseenter="$emit('cursorColor')">
-      <h1>Théo Dupont, Graphiste et Développeur Frontend</h1>
-      <!-- <h6 class="home__caption">
-        Toujours en recherche de progression, je laisse trainer ma curisioté
-        dans tous les domaines.
-      </h6> -->
+      <!-- add <br /> but watch out for responsive in the futur -->
+      <h1>
+        Théo Dupont, Graphiste et<br />
+        Développeur Frontend
+      </h1>
       <h6 class="home__caption">
         Toujours en recherche de progression, je laisse trainer ma
         <mark>curisioté</mark>
         dans tous les domaines.
       </h6>
+      <div class="home__bottom">
+        <span class="home__bottom__line"></span>
+        <h6>me décrouvrir</h6>
+        <span class="home__bottom__line"></span>
+      </div>
     </section>
+    <section class="me">
+      <img class="logo" src="@/assets/img/logo.svg" alt="" />
+      <div class="me__wrapper__text">
+        <h1 class="me__wrapper__text__title">me</h1>
+        <p class="me__wrapper__text__caption">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a
+          lacinia nisi, ut rhoncus metus. Praesent in quam felis. Vivamus
+          fermentum euismod diam, pellentesque convallis felis dignissim ut.
+          Mauris facilisis ornare condimentum. Vivamus auctor sapien ac diam
+          scelerisque, vel maximus ligula maximus. Aliquam sed euismod mauris.
+          In hac habitasse platea dictumst. Sed at congue neque.
+        </p>
+        <div class="me__wrapper__text__citation">
+          <h4 class="me__wrapper__text__citation__quote">
+            "La laideur se vend mal."
+          </h4>
+          <h6 class="me__wrapper__text__citation__autor">→ Raymond Loewy</h6>
+        </div>
+      </div>
+    </section>
+    <section class="projects"></section>
     <section
       class="contact"
       @mouseenter="$emit('cursorColor')"
@@ -111,17 +137,85 @@ section {
 
 h1 {
   font-family: $garcia-marquez;
-  font-weight: normal;
   text-align: center;
   // color: transparent;
   // -webkit-text-stroke: 0.3px white;
 }
 
 .home {
+  position: relative;
   &__caption {
     margin: 1rem 0 0 0;
     font-weight: 300;
     color: var($--main-color);
+  }
+  &__bottom {
+    width: 95%;
+    @extend %flex-center;
+    flex-direction: row;
+    gap: 1rem;
+    position: absolute;
+    bottom: 1rem;
+    &__line {
+      position: relative;
+      height: 0.5px;
+      background: var($--secondary-color);
+      flex: 1;
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 0.3rem;
+        height: 0.3rem;
+        background: var($--secondary-color);
+        transform: translate(0, -50%);
+        clip-path: polygon(0 0, 0 100%, 100% 50%);
+        transition: background 1s ease-in-out, color 0.1s ease-in-out;
+      }
+      &::after {
+        left: auto;
+        right: 0;
+        clip-path: polygon(100% 0, 0 50%, 100% 100%);
+      }
+    }
+
+    h6 {
+      width: auto;
+    }
+  }
+}
+
+.me {
+  width: 77%;
+  @extend %flex-center;
+  flex-direction: row;
+  .logo {
+    width: 30rem;
+  }
+  &__wrapper__text {
+    padding: 10rem 0 0 0;
+    & > * {
+      text-align: left;
+    }
+    &__title {
+      margin: 0 0 0 2rem;
+    }
+    &__caption {
+      font-weight: 300;
+    }
+    &__citation {
+      margin: 2rem 0 0 0;
+      text-align: right;
+      &__quote {
+        font-family: $garcia-marquez;
+        // font-style: italic;
+      }
+      &__autor {
+        font-style: italic;
+      }
+    }
   }
 }
 

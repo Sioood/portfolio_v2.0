@@ -76,6 +76,30 @@ export default {
     });
   },
   methods: {
+    cursor() {
+      const cursor = document.getElementById("cursor");
+      const cursorMask = document.getElementById("cursor--mask");
+
+      cursor.style.left = `${event.clientX}px`;
+      cursor.style.top = `${event.clientY}px`;
+
+      cursorMask.style.left = `${event.clientX}px`;
+      cursorMask.style.top = `${event.clientY}px`;
+
+      const links = document.querySelectorAll(".link");
+
+      links.forEach((link) => {
+        link.addEventListener("mouseenter", () => {
+          cursor.classList.add("cursor--link");
+          cursorMask.classList.add("cursor--mask--link");
+        });
+
+        link.addEventListener("mouseleave", () => {
+          cursor.classList.remove("cursor--link");
+          cursorMask.classList.remove("cursor--mask--link");
+        });
+      });
+    },
     cursorColor() {
       // maybe make an array with object which contain main color and second color for better associations
       const cursor = document.getElementById("cursor");
@@ -101,16 +125,6 @@ export default {
       els.forEach((el) => {
         el.classList.add("slide-right");
       });
-    },
-    cursor() {
-      const cursor = document.getElementById("cursor");
-      const cursorMask = document.getElementById("cursor--mask");
-
-      cursor.style.left = `${event.clientX}px`;
-      cursor.style.top = `${event.clientY}px`;
-
-      cursorMask.style.left = `${event.clientX}px`;
-      cursorMask.style.top = `${event.clientY}px`;
     },
     changeMode: function changeMode(event) {
       const button = event.target;
@@ -152,7 +166,7 @@ export default {
   color: var($--secondary-color);
 }
 
-#cursor {
+.cursor {
   position: fixed;
   width: 16rem;
   height: 25rem;
@@ -160,11 +174,16 @@ export default {
   border-radius: 50%;
   filter: blur(6rem);
   transform: translate(-50%, -50%) rotate(30deg);
-  transition: background 1s ease-in-out, top 0.1s linear, left 0.1s linear;
+  transition: background 1s ease-in-out, top 0.1s linear, left 0.1s linear,
+    width 0.7s ease, height 0.5s ease;
   z-index: -1;
+  &--link {
+    width: 0;
+    height: 0;
+  }
 }
 
-#cursor--mask {
+.cursor--mask {
   position: fixed;
   width: 6rem;
   height: 15rem;
@@ -172,8 +191,13 @@ export default {
   border-radius: 50%;
   filter: blur(5rem);
   transform: translate(-20%, -110%) rotate(30deg);
-  transition: background 1s ease-in-out, top 0.2s linear, left 0.2s linear;
+  transition: background 1s ease-in-out, top 0.1s linear, left 0.1s linear,
+    width 0.7s ease, height 0.5s ease;
   z-index: -1;
+  &--link {
+    width: 0;
+    height: 0;
+  }
 }
 
 nav {
@@ -200,6 +224,7 @@ nav {
     padding: 0.5rem;
     width: 2rem;
     height: 2rem;
+    @extend %flex-center;
     background: var($--main-color);
     box-shadow: 0 0 1rem 0 var($--secondary-color);
     border-radius: 40%;
