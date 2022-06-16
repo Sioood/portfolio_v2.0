@@ -33,7 +33,7 @@ const router = createRouter({
       to, from, savedPosition, reject
       setTimeout(() => {
         resolve({ top: 0, behavior: 'smooth',});
-      }, 275);
+      }, 400);
     });
   },
 });

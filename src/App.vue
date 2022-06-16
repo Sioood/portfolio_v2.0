@@ -5,7 +5,10 @@
       <router-link to="/project">Project</router-link>
     </div>
 
-    <div id="change__mode" @click="changeMode()"></div>
+    <div class="change__mode" @click="changeMode">
+      <img src="@/assets/img/half-moon.svg" alt="" />
+      <div class="sun"></div>
+    </div>
   </nav>
 
   <!-- <router-view v-slot="{ Component }">
@@ -19,11 +22,12 @@
   </router-view> -->
 
   <router-view v-slot="{ Component, route }">
-    <transition :name="route.meta.transitionName">
+    <transition :name="route.meta.transitionName" mode="out-in">
       <component
         @mouseenter="cursorColor()"
         :cursorColors="cursorColors"
         :is="Component"
+        v-on:cursorColor="cursorColor()"
       />
     </transition>
   </router-view>
@@ -73,6 +77,7 @@ export default {
   },
   methods: {
     cursorColor() {
+      // maybe make an array with object which contain main color and second color for better associations
       const cursor = document.getElementById("cursor");
       const cursorMask = document.getElementById("cursor--mask");
 
@@ -86,6 +91,9 @@ export default {
       // const cursor = document.getElementById("cursor");
       cursor.style.background = `${this.cursorColors[randomNumber]}`;
       cursorMask.style.background = `${this.cursorColors[randomNumberMask]}`;
+
+      // emit to children
+      this.$emit("cursorColor");
     },
     enter() {
       const els = document.querySelectorAll(".page");
@@ -104,7 +112,10 @@ export default {
       cursorMask.style.left = `${event.clientX}px`;
       cursorMask.style.top = `${event.clientY}px`;
     },
-    changeMode() {
+    changeMode: function changeMode(event) {
+      const button = event.target;
+      button.classList.toggle("change__mode--light");
+
       /**
        * Get ":root" CSS Element in JS
        */
@@ -116,6 +127,8 @@ export default {
       /**
        * Change colors list of cursor for non same colors of background
        */
+
+      // or maybe pop and push for remove and add only one color ?
 
       return root.classList.contains("light")
         ? (this.cursorColors = ["green", "red", "black"])
@@ -142,11 +155,12 @@ export default {
 #cursor {
   position: fixed;
   width: 16rem;
-  height: 35rem;
+  height: 25rem;
   background: white;
   border-radius: 50%;
   filter: blur(6rem);
   transform: translate(-50%, -50%) rotate(30deg);
+  transition: background 1s ease-in-out, top 0.1s linear, left 0.1s linear;
   z-index: -1;
 }
 
@@ -158,6 +172,7 @@ export default {
   border-radius: 50%;
   filter: blur(5rem);
   transform: translate(-20%, -110%) rotate(30deg);
+  transition: background 1s ease-in-out, top 0.2s linear, left 0.2s linear;
   z-index: -1;
 }
 
@@ -180,17 +195,38 @@ nav {
       color: #42b983;
     }
   }
-  #change__mode {
+  .change__mode {
+    position: relative;
+    padding: 0.5rem;
     width: 2rem;
     height: 2rem;
     background: var($--main-color);
     box-shadow: 0 0 1rem 0 var($--secondary-color);
-    border-radius: 30%;
+    border-radius: 40%;
     cursor: pointer;
     transition: box-shadow 0.15s ease-in-out;
     &:hover {
       box-shadow: 0 0 100rem 55rem var($--secondary-color);
       transition: box-shadow 0.3s ease-in-out;
+    }
+    &--light {
+      img {
+        display: none;
+      }
+      .sun {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 1rem;
+        height: 1rem;
+        background: var($--accent-color);
+        border-radius: 100%;
+        transform: translate(-50%, -50%);
+        pointer-events: none;
+      }
+    }
+    img {
+      pointer-events: none;
     }
   }
 }
@@ -224,19 +260,19 @@ nav {
 .slide-leave-active,
 .slide2-enter-active,
 .slide2-leave-active {
-  transition: transform 0.5s ease-in;
+  transition: transform 0.5s ease;
   // transition: opacity 1s ease-in-out;
 }
 
-.slide-right {
-  transform: translate(-100%, 0);
-  transition: all 5s ease-in;
-}
+// .slide-right {
+//   transform: translate(-100%, 0);
+//   transition: all 5s ease-in;
+// }
 
-.slide-left {
-  transform: translate(100%, 0);
-  transition: all 5s ease-in;
-}
+// .slide-left {
+//   transform: translate(100%, 0);
+//   transition: all 5s ease-in;
+// }
 
 // .slide-right,
 // .slide-left {

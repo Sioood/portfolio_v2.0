@@ -68,8 +68,18 @@
   background: var($--accent-color);
 }
 
+/**
+ * reset
+ */
+
 * {
-  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  outline: none;
+  box-sizing: border-box;
+  text-decoration: none;
+  // cursor: none;
   /**
    * Transition for theme change
    */
@@ -79,6 +89,7 @@
 
 html {
   background: var($--main-color);
+  scroll-behavior: smooth;
   overflow-x: hidden;
 }
 
@@ -112,4 +123,21 @@ h5 {
 
 h6 {
   font-size: 1rem;
+}
+
+/**
+ * another element which can contain text
+ */
+
+button {
+  font-size: 1rem;
+}
+
+a {
+  font-size: 1rem;
+}
+
+mark {
+  padding: 0.3rem;
+  background: var($--accent-color);
 }
