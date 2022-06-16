@@ -33,7 +33,7 @@ export default {
     border: 1px solid var($--secondary-color);
   }
   &--third {
-    padding: 0.1rem;
+    padding: 0.2rem;
     border-bottom: 1px solid var($--secondary-color);
   }
 }

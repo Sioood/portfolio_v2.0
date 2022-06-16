@@ -8,7 +8,7 @@
       </h1>
       <h6 class="home__caption">
         Toujours en recherche de progression, je laisse trainer ma
-        <mark>curisioté</mark>
+        <mark>curiosité</mark>
         dans tous les domaines.
       </h6>
       <div class="home__bottom">
@@ -37,7 +37,17 @@
         </div>
       </div>
     </section>
-    <section class="projects"></section>
+    <section class="projects">
+      <h2>Projects</h2>
+      <div class="projects__cards">
+        <Card
+          v-for="project in projects"
+          :key="project.id"
+          :data-id="project.id"
+          :project="project"
+        />
+      </div>
+    </section>
     <section
       class="contact"
       @mouseenter="$emit('cursorColor')"
@@ -87,13 +97,15 @@
 
 <script>
 import Button from "@/components/ButtonsComp.vue";
+import Card from "@/components/CardComp.vue";
 
 export default {
   name: "HomeView",
   components: {
     Button,
+    Card,
   },
-  props: ["cursorColors"],
+  props: ["cursorColors", "projects"],
   methods: {
     easterEgg() {
       console.log("hello");
@@ -189,6 +201,7 @@ h1 {
 
 .me {
   width: 77%;
+  height: 110vh;
   @extend %flex-center;
   flex-direction: row;
   .logo {
@@ -219,8 +232,42 @@ h1 {
   }
 }
 
+.projects {
+  margin: 15rem 0 1rem 0;
+  width: 77%;
+  height: 100%;
+  @extend %flex-center;
+  flex-direction: column;
+  font-family: $garcia-marquez;
+  text-align: left;
+  h2 {
+    margin: 0 0 5rem 0;
+    width: 100%;
+  }
+  &__cards {
+    width: 100%;
+    @extend %flex-space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 25rem 5rem;
+    &__card:nth-child(3n + 0) {
+      // background: red;
+      flex: 1 1 20vw;
+    }
+    &__card:nth-child(3n + 1) {
+      // background: green;
+      flex: 1 1 30vw;
+    }
+    &__card:nth-child(3n + 2) {
+      // background: blue;
+      flex: 1 1 25vw;
+    }
+  }
+}
+
 .contact {
   position: relative;
+  height: 100vh;
   .wrapper__email {
     width: 77%;
     .email {

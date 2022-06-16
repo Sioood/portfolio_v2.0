@@ -28,6 +28,7 @@
         :cursorColors="cursorColors"
         :is="Component"
         v-on:cursorColor="cursorColor()"
+        :projects="projects"
       />
     </transition>
   </router-view>
@@ -47,11 +48,18 @@
 </template>
 
 <script>
+import Projects from "@/assets/projects.json";
+
 export default {
   data() {
     return {
       // maybe not white and black for theme mode ? or add another array in changeMode()  ?
-      cursorColors: ["green", "red", "white"],
+      cursorColors: [
+        ["#18ff00", "#4044e9", "#f27121"],
+        ["#47a173", "#c7fb7c", "#1b4bf4"],
+        ["#1874ba", "#feffab", "#c41c86"],
+      ],
+      projects: Projects,
     };
   },
   mounted: function () {
@@ -78,43 +86,36 @@ export default {
   methods: {
     cursor() {
       const cursor = document.getElementById("cursor");
-      const cursorMask = document.getElementById("cursor--mask");
 
       cursor.style.left = `${event.clientX}px`;
       cursor.style.top = `${event.clientY}px`;
-
-      cursorMask.style.left = `${event.clientX}px`;
-      cursorMask.style.top = `${event.clientY}px`;
 
       const links = document.querySelectorAll(".link");
 
       links.forEach((link) => {
         link.addEventListener("mouseenter", () => {
           cursor.classList.add("cursor--link");
-          cursorMask.classList.add("cursor--mask--link");
         });
 
         link.addEventListener("mouseleave", () => {
           cursor.classList.remove("cursor--link");
-          cursorMask.classList.remove("cursor--mask--link");
         });
       });
     },
     cursorColor() {
+      console.log("enter");
       // maybe make an array with object which contain main color and second color for better associations
       const cursor = document.getElementById("cursor");
-      const cursorMask = document.getElementById("cursor--mask");
 
-      const randomNumber = Math.floor(
+      const randomColor = Math.floor(
         Math.random() * (this.cursorColors.length - 0) + 0
       );
 
-      const randomNumberMask = Math.floor(
-        Math.random() * (this.cursorColors.length - 0) + 0
-      );
-      // const cursor = document.getElementById("cursor");
-      cursor.style.background = `${this.cursorColors[randomNumber]}`;
-      cursorMask.style.background = `${this.cursorColors[randomNumberMask]}`;
+      const randomAngle = Math.floor(Math.random() * (360 - 0) + 0);
+
+      // cursor.style.background = `${this.cursorColors[randomNumber]}`;
+      // maybe 2 colors is better
+      cursor.style.background = `linear-gradient(${randomAngle}deg, ${this.cursorColors[randomColor][0]} 0%, ${this.cursorColors[randomColor][1]} 50%, ${this.cursorColors[randomColor][2]} 100%)`;
 
       // emit to children
       this.$emit("cursorColor");
@@ -144,9 +145,9 @@ export default {
 
       // or maybe pop and push for remove and add only one color ?
 
-      return root.classList.contains("light")
-        ? (this.cursorColors = ["green", "red", "black"])
-        : (this.cursorColors = ["green", "red", "white"]);
+      // return root.classList.contains("light")
+      //   ? (this.cursorColors = ["green", "red", "black"])
+      //   : (this.cursorColors = ["green", "red", "white"]);
     },
   },
 };
@@ -174,31 +175,48 @@ export default {
   border-radius: 50%;
   filter: blur(6rem);
   transform: translate(-50%, -50%) rotate(30deg);
-  transition: background 1s ease-in-out, top 0.1s linear, left 0.1s linear,
-    width 0.7s ease, height 0.5s ease;
-  z-index: -1;
+  transition: background 1s ease-in-out, width 0.7s ease, height 0.5s ease;
+  z-index: -666;
   &--link {
     width: 0;
     height: 0;
+  }
+  animation: shape 5s linear infinite alternate-reverse;
+
+  @keyframes shape {
+    0% {
+      width: 16rem;
+      height: 25rem;
+    }
+    50% {
+      width: 25rem;
+      height: 16rem;
+    }
+    100% {
+      width: 18rem;
+      height: 20rem;
+    }
   }
 }
 
-.cursor--mask {
-  position: fixed;
-  width: 6rem;
-  height: 15rem;
-  background: red;
-  border-radius: 50%;
-  filter: blur(5rem);
-  transform: translate(-20%, -110%) rotate(30deg);
-  transition: background 1s ease-in-out, top 0.1s linear, left 0.1s linear,
-    width 0.7s ease, height 0.5s ease;
-  z-index: -1;
-  &--link {
-    width: 0;
-    height: 0;
-  }
-}
+// .cursor--mask {
+//   position: fixed;
+//   width: 6rem;
+//   height: 15rem;
+//   background: red;
+//   border-radius: 50%;
+//   filter: blur(5rem);
+//   transform: translate(-20%, -110%) rotate(30deg);
+//   transition: background 1s ease-in-out, width 0.7s ease, height 0.5s ease;
+
+//   // transition: background 1s ease-in-out, top 0.1s linear, left 0.1s linear,
+//   //   width 0.7s ease, height 0.5s ease;
+//   z-index: -1;
+//   &--link {
+//     width: 0;
+//     height: 0;
+//   }
+// }
 
 nav {
   width: 100%;
@@ -213,10 +231,10 @@ nav {
 
     a {
       font-weight: bold;
-      color: #2c3e50;
+      color: var($--main-color);
     }
     a.router-link-exact-active {
-      color: #42b983;
+      color: var($--main-color);
     }
   }
   .change__mode {
