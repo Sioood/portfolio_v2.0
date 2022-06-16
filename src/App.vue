@@ -174,27 +174,24 @@ export default {
   background: white;
   border-radius: 50%;
   filter: blur(6rem);
-  transform: translate(-50%, -50%) rotate(30deg);
+  // transform: translate(-50%, -50%) rotate(30deg);
   transition: background 1s ease-in-out, width 0.7s ease, height 0.5s ease;
   z-index: -666;
   &--link {
     width: 0;
     height: 0;
   }
-  animation: shape 5s linear infinite alternate-reverse;
+  animation: shape 25s linear infinite alternate-reverse;
 
   @keyframes shape {
     0% {
-      width: 16rem;
-      height: 25rem;
+      transform: translate(-50%, -50%) scale(80%, 50%) rotate(30deg);
     }
     50% {
-      width: 25rem;
-      height: 16rem;
+      transform: translate(-50%, -50%) scale(60%, 100%) rotate(90deg);
     }
     100% {
-      width: 18rem;
-      height: 20rem;
+      transform: translate(-50%, -50%) scale(90%, 70%) rotate(60deg);
     }
   }
 }
