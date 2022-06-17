@@ -6,7 +6,6 @@ $--main-color: --main-color;
 $--secondary-color: --secondary-color;
 $--accent-color: --accent-color;
 
-
 /**
  * Main theme
  */
@@ -25,6 +24,16 @@ $theme-map-light: (
   $--main-color: #fff,
   $--secondary-color: #000,
   $--accent-color: #e63b3b,
+);
+
+/**
+ * Special theme -> easter egg siod
+ */
+
+$theme-map-siod: (
+  $--main-color: #2ed8e0,
+  $--secondary-color: #e03aac,
+  $--accent-color: #faf979,
 );
 
 // fonts

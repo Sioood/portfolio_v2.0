@@ -77,6 +77,29 @@ export default {
       console.log(height);
       console.log(window.scrollY);
     });
+    let step = [];
+    window.addEventListener("keyup", (event) => {
+      if (event.key == "s") {
+        step = [];
+        step.push(event.key);
+      } else if (event.key == "i" && step.includes("s")) {
+        step.push(event.key);
+      } else if (event.key == "o" && step.includes("i")) {
+        step.push(event.key);
+      } else if (event.key == "d" && step.includes("o")) {
+        step.push(event.key);
+      } else if (event.key != "s") {
+        return (step = []);
+      }
+
+      if (step.length == 4 && step.includes("d")) {
+        const root = document.querySelector(":root");
+        root.classList.toggle("siod");
+        return;
+      }
+      // console.log(event.keyCode);
+      // do something
+    });
   },
   unmounted: function () {
     window.addEventListener("mousemove", () => {
@@ -103,7 +126,7 @@ export default {
       });
     },
     cursorColor() {
-      console.log("enter");
+      // console.log("enter");
       // maybe make an array with object which contain main color and second color for better associations
       const cursor = document.getElementById("cursor");
 
@@ -130,14 +153,24 @@ export default {
     changeMode: function changeMode(event) {
       const button = event.target;
       button.classList.toggle("change__mode--light");
-
       /**
        * Get ":root" CSS Element in JS
        */
       const root = document.querySelector(":root");
+
+      /**
+       * Remove easter theme
+       */
+
+      root.classList.remove("siod");
+
+      /**
+       * Toggle light theme
+       */
+
       root.classList.toggle("light");
 
-      console.log(root.classList.contains("light"));
+      // console.log(root.classList.contains("light"));
 
       /**
        * Change colors list of cursor for non same colors of background

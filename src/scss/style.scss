@@ -15,6 +15,9 @@
 :root.light {
   @include spread-map($theme-map-light);
 }
+:root.siod {
+  @include spread-map($theme-map-siod);
+}
 
 /**
  * scrollbar
