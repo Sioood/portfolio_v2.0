@@ -106,6 +106,14 @@ export default {
       this.cursor();
     });
   },
+  watch: {
+    $route: {
+      immediate: true,
+      handler(to) {
+        document.title = to.meta.title || "Théo Dupont";
+      },
+    },
+  },
   methods: {
     cursor() {
       const cursor = document.getElementById("cursor");

@@ -8,6 +8,7 @@ const routes = [
     name: "home",
     component: HomeView,
     meta: {
+      title: "Théo Dupont - Portfolio",
       transitionName: "slide",
       enterClass: "slide slide-right",
       leaveClass: "slide slide-left",
@@ -18,6 +19,7 @@ const routes = [
     name: "project",
     component: ProjectView,
     meta: {
+      title: "Théo Dupont - Project",
       transitionName: "slide2",
       enterClass: "slide slide-left",
       leaveClass: "slide slide-right",

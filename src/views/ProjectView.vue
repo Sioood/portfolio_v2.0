@@ -1,12 +1,21 @@
 <template>
   <div class="page project">
     <section><h1>Project</h1></section>
+    {{ project.title }}
   </div>
 </template>
 
 <script>
+// import router from "@/router";
+
 export default {
   name: "ProjectView",
+  props: ["cursorColors", "projects"],
+  data() {
+    return {
+      project: this.projects[this.$route.query.id - 1],
+    };
+  },
 };
 </script>
 

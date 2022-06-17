@@ -1,6 +1,6 @@
 [
   {
-    "id": "01",
+    "id": "1",
     "title": "project 01",
     "date": "2019",
     "preview": "salon-du-vin/affiche.png",
@@ -22,7 +22,7 @@
     }
   },
   {
-    "id": "02",
+    "id": "2",
     "title": "project 02",
     "date": "2022",
     "preview": "inter-assurances/business-card-recto.png",
@@ -40,7 +40,7 @@
     }
   },
   {
-    "id": "03",
+    "id": "3",
     "title": "project 03",
     "date": "2022",
     "preview": "inter-assurances/business-card-recto.png",
@@ -58,7 +58,7 @@
     }
   },
   {
-    "id": "04",
+    "id": "4",
     "title": "project 04",
     "date": "2022",
     "preview": "salon-du-vin/affiche.png",

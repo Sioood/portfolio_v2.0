@@ -1,7 +1,10 @@
 <template>
   <div class="projects__cards__card card">
     <a :href="'/project?id=' + project.id" class="card__wrapper">
-      <h6 class="card__wrapper__index">{{ project.id }}</h6>
+      <h6 v-if="project.id < 10" class="card__wrapper__index">
+        {{ "0" + project.id }}
+      </h6>
+      <h6 v-else class="card__wrapper__index">{{ project.id }}</h6>
       <h6 class="card__wrapper__title">{{ project.title }}</h6>
       <img
         v-if="project.preview"
