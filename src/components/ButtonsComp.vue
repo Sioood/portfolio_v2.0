@@ -1,14 +1,17 @@
 <template>
   <button v-if="!link" :class="'link button  button--' + type">{{ text }}</button>
-  <a v-else target="_blank" :href="link" :class="'link button  button--' + type">{{
+  <a v-else-if="link && router === false" target="_blank" :href="link" :class="'link button  button--' + type">{{
     text
   }}</a>
+  <router-link v-else-if="link && router === true" :to="link" :class="'link button  button--' + type">{{
+    text
+  }}</router-link>
 </template>
 
 <script>
 export default {
   name: "ButtonsComp",
-  props: ["type", "text", "link"],
+  props: ["type", "text", "link", "router"],
 };
 </script>
 

@@ -1,20 +1,20 @@
 <template>
   <div @scroll="easterEgg()" class="page home">
-    <section class="home" @mouseenter="$emit('cursorColor')">
+    <section class="baseline" @mouseenter="$emit('cursorColor')">
       <!-- add <br /> but watch out for responsive in the futur -->
       <h1>
         Théo Dupont, Graphiste et<br />
         Développeur Frontend
       </h1>
-      <h6 class="home__caption">
+      <h6 class="baseline__caption">
         Toujours en recherche de progression, je laisse trainer ma
         <mark>curiosité</mark>
         dans tous les domaines.
       </h6>
-      <div class="home__bottom">
-        <span class="home__bottom__line"></span>
+      <div class="baseline__bottom">
+        <span class="baseline__bottom__line"></span>
         <h6>me décrouvrir</h6>
-        <span class="home__bottom__line"></span>
+        <span class="baseline__bottom__line"></span>
       </div>
     </section>
     <section class="me">
@@ -62,6 +62,7 @@
             id="send__mail"
             text="→ send me a message"
             type="secondary"
+            :router="false"
             link="mailto:theodupontpro@gmail.com?subject=Contact&body="
           />
         </h1>
@@ -73,16 +74,19 @@
             <Button
               text="github, "
               type="third"
+              :router="false"
               link="https://github.com/Sioood"
             />
             <Button
               text="instagram, "
               type="third"
+              :router="false"
               link="https://www.instagram.com/sioooood/"
             />
             <Button
               text="twitter."
               type="third"
+              :router="false"
               link="https://twitter.com/Siooooood"
             />
           </li>
@@ -142,7 +146,7 @@ export default {
 
 section {
   width: 100%;
-  height: 100vh;
+  // height: 100vh;
   @extend %flex-center;
   flex-direction: column;
 }
@@ -154,8 +158,9 @@ h1 {
   // -webkit-text-stroke: 0.3px white;
 }
 
-.home {
+.baseline {
   position: relative;
+  height: 100vh;
   &__caption {
     margin: 1rem 0 0 0;
     font-weight: 300;
@@ -235,7 +240,7 @@ h1 {
 .projects {
   margin: 15rem 0 1rem 0;
   width: 77%;
-  height: 100%;
+  // height: 100%;
   @extend %flex-center;
   flex-direction: column;
   font-family: $garcia-marquez;

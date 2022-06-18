@@ -12,16 +12,44 @@
         {{ project.date }}
       </div>
       <div class="project__container__nav">
-        <router-link v-if="project.id == 1" to="/">← back to home</router-link>
-        <router-link v-else :to="`${project.id - 1}`"
+        <!-- <router-link v-if="project.id == 1" to="/">← back to home</router-link> -->
+        <Button
+          v-if="project.id == 1"
+          text="← back to home"
+          type="secondary"
+          :router="true"
+          link="/"
+        />
+        <!-- <router-link v-else :to="`${project.id - 1}`"
           >← previous project</router-link
-        >
-        <router-link v-if="project.id == projects.length" to="/"
+        > -->
+        <Button
+          v-else
+          text="← previous project"
+          type="secondary"
+          :router="true"
+          :link="`${project.id - 1}`"
+        />
+        <!-- <router-link v-if="project.id == projects.length" to="/"
           >back to home →</router-link
-        >
-        <router-link v-else :to="`${project.id + 1}`"
+        > -->
+        <Button
+          v-if="project.id == projects.length"
+          text="back to home →"
+          type="secondary"
+          :router="true"
+          link="/"
+        />
+        <!-- <router-link v-else :to="`${project.id + 1}`"
           >next project →</router-link
-        >
+        > -->
+        <Button
+          v-else
+          text="next project →"
+          type="secondary"
+          :router="true"
+          :link="`${project.id + 1}`"
+        />
       </div>
     </section>
   </div>
@@ -29,9 +57,13 @@
 
 <script>
 // import router from "@/router";
+import Button from "@/components/ButtonsComp.vue";
 
 export default {
   name: "ProjectView",
+  components: {
+    Button,
+  },
   props: ["cursorColors", "projects"],
   data() {
     return {
@@ -60,11 +92,18 @@ export default {
 
 .project {
   width: 100vw;
-  height: 100vh;
+  height: auto;
   @extend %flex-center;
   flex-direction: column;
   &__container {
     width: 55%;
+    &__title {
+    }
+    &__content {
+      // height: 50vh;
+    }
+    &__date {
+    }
     &__nav {
       width: 100%;
       @extend %flex-space-between;
