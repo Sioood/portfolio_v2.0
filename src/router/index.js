@@ -9,18 +9,31 @@ const routes = [
     component: HomeView,
     meta: {
       title: "Théo Dupont - Portfolio",
-      transitionName: "slide",
+      transitionName: "slide-back",
       enterClass: "slide slide-right",
       leaveClass: "slide slide-left",
     },
+    // children: [
+    //   {
+    //     path: "project/:id",
+    //     name: "project",
+    //     component: ProjectView,
+    //     meta: {
+    //       title: "Théo Dupont - Project",
+    //       // transitionName: "slide",
+    //       enterClass: "slide slide-left",
+    //       leaveClass: "slide slide-right",
+    //     },
+    //   },
+    // ],
   },
   {
-    path: "/project",
+    path: "/project/:id",
     name: "project",
     component: ProjectView,
     meta: {
       title: "Théo Dupont - Project",
-      transitionName: "slide2",
+      transitionName: "slide",
       enterClass: "slide slide-left",
       leaveClass: "slide slide-right",
     },
@@ -32,9 +45,9 @@ const router = createRouter({
   routes,
   scrollBehavior(to, from, savedPosition) {
     return new Promise((resolve, reject) => {
-      to, from, savedPosition, reject
+      to, from, savedPosition, reject;
       setTimeout(() => {
-        resolve({ top: 0, behavior: 'smooth',});
+        resolve({ top: 0, behavior: "smooth" });
       }, 400);
     });
   },

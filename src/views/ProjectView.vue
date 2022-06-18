@@ -13,13 +13,13 @@
       </div>
       <div class="project__container__nav">
         <router-link v-if="project.id == 1" to="/">← back to home</router-link>
-        <router-link v-else :to="`project?id=${project.id - 1}`"
+        <router-link v-else :to="`${project.id - 1}`"
           >← previous project</router-link
         >
         <router-link v-if="project.id == projects.length" to="/"
           >back to home →</router-link
         >
-        <router-link v-else :to="`project?id=${project.id + 1}`"
+        <router-link v-else :to="`${project.id + 1}`"
           >next project →</router-link
         >
       </div>
@@ -35,7 +35,7 @@ export default {
   props: ["cursorColors", "projects"],
   data() {
     return {
-      project: this.projects[this.$route.query.id - 1],
+      project: this.projects[this.$route.params.id - 1],
     };
   },
   updated() {
@@ -46,7 +46,7 @@ export default {
       immediate: true,
       handler() {
         // document.title = to.meta.title || "Théo Dupont";
-        this.project = this.projects[this.$route.query.id - 1];
+        this.project = this.projects[this.$route.params.id - 1];
       },
     },
   },

@@ -2,7 +2,7 @@
   <nav>
     <div class="links">
       <router-link to="/">Home</router-link>
-      <router-link to="/project?id=1">Project</router-link>
+      <router-link to="/project/1">Project</router-link>
     </div>
 
     <div class="change__mode" @click="changeMode">
@@ -21,9 +21,27 @@
     </transition>
   </router-view> -->
 
-  <router-view v-slot="{ Component, route }">
+  <!-- classic -->
+
+  <!-- <router-view v-slot="{ Component, route }">
     <transition :name="route.meta.transitionName" mode="out-in">
       <component
+        :key="$route.params.id"
+        @mouseenter="cursorColor()"
+        :cursorColors="cursorColors"
+        :is="Component"
+        v-on:cursorColor="cursorColor()"
+        :projects="projects"
+      />
+    </transition>
+  </router-view> -->
+
+  <!-- try to deal with different animation for index project previous and next -->
+
+  <router-view v-slot="{ Component }">
+    <transition :name="transitionName" mode="out-in">
+      <component
+        :key="$route.params.id"
         @mouseenter="cursorColor()"
         :cursorColors="cursorColors"
         :is="Component"
@@ -60,6 +78,8 @@ export default {
         ["#1874ba", "#feffab", "#c41c86"],
       ],
       projects: Projects,
+      index: 0,
+      transitionName: "slide",
     };
   },
   mounted: function () {
@@ -110,7 +130,31 @@ export default {
     $route: {
       immediate: true,
       handler(to) {
+        // console.log("transition" + this.transition);
         document.title = to.meta.title || "Théo Dupont";
+        // console.log(this.$route.path.split("/")[1]);
+        if (
+          this.$route.path.split("/")[1] == "project" &&
+          this.index > this.$route.params.id
+        ) {
+          this.transitionName = "slide-back";
+          this.index = null;
+        } else if (
+          this.$route.path.split("/")[1] == "project" &&
+          this.index < this.$route.params.id
+        ) {
+          // change name of animation
+          this.transitionName = "slide";
+        } else if (
+          this.$route.path == "/" &&
+          this.index == this.projects.length
+        ) {
+          this.transitionName = "slide";
+        } else {
+          this.transitionName = this.$route.meta.transitionName;
+        }
+
+        this.index = this.$route.params.id;
       },
     },
   },
@@ -319,28 +363,28 @@ nav {
 
 // first animation
 
-.slide-enter-from {
+.slide-back-enter-from {
   transform: translate(-100%, 0);
 }
-.slide-leave-to {
+.slide-back-leave-to {
   transform: translate(100%, 0);
   // opacity: 0;
 }
 
 //second
 
-.slide2-enter-from {
+.slide-enter-from {
   transform: translate(100%, 0);
 }
-.slide2-leave-to {
+.slide-leave-to {
   transform: translate(-100%, 0);
   // opacity: 0;
 }
 
+.slide-back-enter-active,
+.slide-back-leave-active,
 .slide-enter-active,
-.slide-leave-active,
-.slide2-enter-active,
-.slide2-leave-active {
+.slide-leave-active {
   transition: transform 0.5s ease;
   // transition: opacity 1s ease-in-out;
 }

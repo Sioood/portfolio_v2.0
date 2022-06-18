@@ -1,6 +1,6 @@
 <template>
   <div class="projects__cards__card card">
-    <a :href="'/project?id=' + project.id" class="card__wrapper">
+    <router-link :to="'/project/' + project.id" class="card__wrapper">
       <h6 v-if="project.id < 10" class="card__wrapper__index">
         {{ "0" + project.id }}
       </h6>
@@ -12,7 +12,7 @@
         :src="require('@/assets/img/projects/' + project.preview)"
         alt=""
       />
-    </a>
+    </router-link>
   </div>
 </template>
 
