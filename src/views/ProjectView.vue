@@ -1,7 +1,29 @@
 <template>
   <div class="page project">
-    <section><h1>Project</h1></section>
-    {{ project.title }}
+    <h1>Project</h1>
+    <section class="project__container">
+      <div class="project__container__title">
+        {{ project.title }}
+      </div>
+      <div class="project__container__content">
+        {{ project.title }}
+      </div>
+      <div class="project__container__date">
+        {{ project.date }}
+      </div>
+      <div class="project__container__nav">
+        <router-link v-if="project.id == 1" to="/">← back to home</router-link>
+        <router-link v-else :to="`project?id=${project.id - 1}`"
+          >← previous project</router-link
+        >
+        <router-link v-if="project.id == projects.length" to="/"
+          >back to home →</router-link
+        >
+        <router-link v-else :to="`project?id=${project.id + 1}`"
+          >next project →</router-link
+        >
+      </div>
+    </section>
   </div>
 </template>
 
@@ -16,6 +38,18 @@ export default {
       project: this.projects[this.$route.query.id - 1],
     };
   },
+  updated() {
+    console.log(this.project.id + " " + this.projects.length);
+  },
+  watch: {
+    $route: {
+      immediate: true,
+      handler() {
+        // document.title = to.meta.title || "Théo Dupont";
+        this.project = this.projects[this.$route.query.id - 1];
+      },
+    },
+  },
 };
 </script>
 
@@ -26,9 +60,19 @@ export default {
 
 .project {
   width: 100vw;
-  height: 200vh;
+  height: 100vh;
   @extend %flex-center;
   flex-direction: column;
+  &__container {
+    width: 55%;
+    &__nav {
+      width: 100%;
+      @extend %flex-space-between;
+      a {
+        color: var($--secondary-color);
+      }
+    }
+  }
 }
 
 h1 {

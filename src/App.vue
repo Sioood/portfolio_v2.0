@@ -2,7 +2,7 @@
   <nav>
     <div class="links">
       <router-link to="/">Home</router-link>
-      <router-link to="/project">Project</router-link>
+      <router-link to="/project?id=1">Project</router-link>
     </div>
 
     <div class="change__mode" @click="changeMode">
