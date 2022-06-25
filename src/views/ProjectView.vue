@@ -1,6 +1,6 @@
 <template>
   <div class="page project">
-    <h1>Project</h1>
+    <h2 class="project__title">{{ project.title }}</h2>
     <section
       v-for="section in project.data.section"
       :key="section.content.type"
@@ -35,10 +35,21 @@
           </div>
         </div>
       </div>
-      <h5 class="project__container__date">
-        Personal project
-        <br />
-        {{ ` — ${project.date}` }}
+
+      <h5
+        v-if="section.client && section.date"
+        class="project__container__date"
+      >
+        {{ section.client + " — " + section.date }}
+      </h5>
+      <h5
+        v-else-if="!section.client && section.date"
+        class="project__container__date"
+      >
+        {{ section.date }}
+      </h5>
+      <h5 v-else class="project__container__date">
+        {{ section.client }}
       </h5>
     </section>
     <div class="project__nav">
@@ -120,29 +131,40 @@ export default {
 @import "@/scss/_utils.scss";
 
 .project {
+  padding: 5rem 0;
   width: 100vw;
   height: auto;
   @extend %flex-center;
   flex-direction: column;
+  &__title {
+    width: 63%;
+    // word-break: break-all;
+    font-family: $garcia-marquez;
+    font-weight: normal;
+    text-align: center;
+  }
   &__container {
     position: relative;
-    margin-bottom: 5rem;
-    width: 55%;
+    margin-bottom: 3rem;
+    width: 63%;
     display: flex;
     flex-direction: row;
     align-items: baseline;
-    gap: 4rem;
-    & > * {
-      flex: 1 1 auto;
-    }
+    gap: 2rem;
+    // & > * {
+    //   flex: 1 1 auto !important;
+    // }
     &__title {
-      align-self: baseline;
       position: sticky;
       top: 1rem;
-      white-space: nowrap;
+      align-self: baseline;
+      flex: 1 1 15%;
+      text-align: right;
+      // white-space: nowrap;
     }
     &__content {
       width: 100%;
+      flex: 1 1 50%;
       &__data {
         @extend %flex-center;
         flex-direction: column;
@@ -161,9 +183,10 @@ export default {
             justify-content: center;
             align-self: center;
             &__alt {
-              opacity: 0.3;
+              color: var($--main-color);
+              // opacity: 0.4;
               font-style: italic;
-              font-weight: 200;
+              font-weight: 300;
             }
             img {
               width: 100%;
@@ -173,7 +196,10 @@ export default {
       }
     }
     &__date {
-      white-space: nowrap;
+      position: sticky;
+      top: 1rem;
+      flex: 1 1 15%;
+      // white-space: nowrap;
     }
   }
   &__nav {
@@ -183,11 +209,5 @@ export default {
       color: var($--secondary-color);
     }
   }
-}
-
-h1 {
-  font-family: $garcia-marquez;
-  font-weight: normal;
-  text-align: center;
 }
 </style>

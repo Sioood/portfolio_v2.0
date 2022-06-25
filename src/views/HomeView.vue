@@ -77,17 +77,29 @@
               :router="false"
               link="https://github.com/Sioood"
             />
+          </li>
+          <li>
             <Button
               text="instagram, "
               type="third"
               :router="false"
               link="https://www.instagram.com/sioooood/"
             />
+          </li>
+          <li>
             <Button
-              text="twitter."
+              text="twitter,"
               type="third"
               :router="false"
               link="https://twitter.com/Siooooood"
+            />
+          </li>
+          <li>
+            <Button
+              text="99REFERENCE."
+              type="third"
+              :router="false"
+              link="https://99reference.fr"
             />
           </li>
         </ul>
@@ -295,6 +307,10 @@ h1 {
     bottom: 1.5rem;
     & > * {
       font-weight: 200;
+    }
+    .links {
+      @extend %flex-center;
+      flex-direction: row;
     }
   }
 }

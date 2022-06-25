@@ -351,6 +351,7 @@ nav {
       }
     }
     img {
+      // fill: var($--accent-color);
       pointer-events: none;
     }
   }
