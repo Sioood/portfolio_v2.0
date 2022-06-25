@@ -7,14 +7,29 @@
     "alt": "url",
     "caption": "",
     "data": {
-      "sections": [
+      "section": [
         {
-          "title": "",
+          "title": "title 1",
           "content": [
             {
-              "type": "text or image",
-              "data": "url or text",
-              "alt": "alt text if img"
+              "type": "text",
+              "data": "vamus pellentesque nibh placerat facilisis vulputate. Donec eu viverra odio, quis commodo nunc. Nulla sollicitudin eget ante et dapibus. Integer pulvinar ipsum risus, at tempor risus bibendum a. Nunc vitae feugiat ex. Vivamus posuere quam ligula, non dapibus sapien ultrices hendrerit. Vestibulum non bibendum ante, in molestie metus. In rutrum metus at est rutrum dapibus. Integer in erat aliquet, vestibulum tellus at, ultricies lacus. Etiam consectetur suscipit tellus, fringilla porttitor ex suscipit sit amet. Morbi fermentum pharetra urna eu sollicitudin. Proin nec velit vitae erat egestas eleifend. Suspendisse facilisis ex sit amet pellentesque pellentesque. Suspendisse potenti. Aenean tempor tortor ac sapien mollis, et volutpat mi egestas. Nam vitae posuere mi, ut sodales risus. Nunc varius, risus vitae porttitor dignissim, est ex commodo purus, nec fringilla orci dui nec nulla. Nam sem mi, luctus ac placerat et, consequat ac metus. Vestibulum pharetra urna id ipsum malesuada consequat. Morbi ac lectus nisl. Aliquam erat volutpat. Cras tincidunt mollis lorem, at lacinia neque rhoncus vel. Morbi malesuada, diam vitae laoreet egestas, turpis nisi consequat tortor, at scelerisque eros risus eu justo. Sed feugiat enim bibendum nulla varius bibendum non vel mi. Sed pellentesque pulvinar sapien in aliquam. Fusce posuere metus at velit auctor, in congue dui accumsan.",
+              "alt": null
+            },
+            {
+              "type": "img",
+              "data": "salon-du-vin/affiche.png",
+              "alt": "Affiche du salon du vin et des terroirs"
+            }
+          ]
+        },
+        {
+          "title": "long title 2",
+          "content": [
+            {
+              "type": "img",
+              "data": "salon-du-vin/affiche.png",
+              "alt": "Affiche du salon du vin et des terroirs"
             }
           ]
         }

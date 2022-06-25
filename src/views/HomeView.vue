@@ -299,7 +299,7 @@ h1 {
   }
 }
 
-p {
-  width: 50vw;
-}
+// p {
+//   width: 50vw;
+// }
 </style>
