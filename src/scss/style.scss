@@ -5,13 +5,11 @@
 @import "./utils/mixins";
 
 :root {
-  font-size: 16px;
+  font-size: 18px;
   line-height: 2;
-}
-
-:root {
   @include spread-map($theme-map-dark);
 }
+
 :root.light {
   @include spread-map($theme-map-light);
 }
@@ -98,10 +96,6 @@ html {
   overflow-x: hidden;
 }
 
-// body {
-//   background: var($--main-color);
-// }
-
 /**
  * headers
  */
@@ -149,4 +143,46 @@ a {
 mark {
   padding: 0.3rem;
   background: var($--accent-color);
+}
+
+@media screen and (max-width: 1536px) {
+  :root {
+    font-size: 16px;
+
+  }
+}
+
+@media screen and (max-width: 1280px) {
+}
+
+@media screen and (max-width: 1024px) {
+}
+
+@media screen and (max-width: 768px) {
+}
+
+@media screen and (max-width: 640px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 2.081rem;
+  }
+  
+  h3 {
+    font-size: 1.732rem;
+  }
+  
+  h4 {
+    font-size: 1.442rem;
+  }
+  
+  h5 {
+    font-size: 1.201rem;
+  }
+  
+  h6 {
+    font-size: 1rem;
+  }
 }

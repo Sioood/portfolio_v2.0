@@ -20,7 +20,7 @@
     <section class="me">
       <img class="logo" src="@/assets/img/logo.svg" alt="" />
       <div class="me__wrapper__text">
-        <h1 class="me__wrapper__text__title">me</h1>
+        <h2 class="me__wrapper__text__title">me</h2>
         <p class="me__wrapper__text__caption">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a
           lacinia nisi, ut rhoncus metus. Praesent in quam felis. Vivamus
@@ -55,9 +55,8 @@
       @click="easterEgg()"
     >
       <div class="wrapper__email">
-        <h1 class="email">
-          theodupontpro@ <br />
-          gmail.com
+        <h2 class="email">
+          theodupontpro@gmail.com
           <Button
             id="send__mail"
             text="→ send me a message"
@@ -65,7 +64,7 @@
             :router="false"
             link="mailto:theodupontpro@gmail.com?subject=Contact&body="
           />
-        </h1>
+        </h2>
       </div>
       <footer>
         <h6 class="copyright">©2022</h6>
@@ -163,16 +162,15 @@ section {
   flex-direction: column;
 }
 
-h1 {
-  font-family: $garcia-marquez;
-  text-align: center;
-  // color: transparent;
-  // -webkit-text-stroke: 0.3px white;
-}
-
 .baseline {
   position: relative;
   height: 100vh;
+  h1 {
+    font-family: $garcia-marquez;
+    text-align: center;
+    // color: transparent;
+    // -webkit-text-stroke: 0.3px white;
+  }
   &__caption {
     margin: 1rem 0 0 0;
     font-weight: 300;
@@ -231,6 +229,7 @@ h1 {
     }
     &__title {
       margin: 0 0 0 2rem;
+      font-family: $garcia-marquez;
     }
     &__caption {
       font-weight: 300;
@@ -289,12 +288,15 @@ h1 {
     width: 77%;
     .email {
       position: relative;
+      width: 51%;
+      font-family: $garcia-marquez;
       text-align: left;
       text-transform: uppercase;
+      word-break: break-all;
       #send__mail {
         position: absolute;
-        top: 65%;
-        right: 30%;
+        top: 63%;
+        right: 0%;
         font-family: $aileron;
         font-size: 1rem;
       }
@@ -311,6 +313,7 @@ h1 {
     .links {
       @extend %flex-center;
       flex-direction: row;
+      flex-wrap: wrap;
     }
   }
 }
@@ -318,4 +321,71 @@ h1 {
 // p {
 //   width: 50vw;
 // }
+
+@media screen and (max-width: 1536px) {
+  .contact {
+    .wrapper__email {
+      .email {
+        width: 55%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .me {
+    width: 77%;
+    height: auto;
+    @extend %flex-center;
+    flex-direction: column;
+    .logo {
+      padding: 3rem 0 0 0;
+      width: 100%;
+    }
+    &__wrapper__text {
+      padding: 1rem 0 0 0;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .baseline {
+    padding: 0 10vw;
+    h1 {
+      text-align: left;
+      line-height: 1.2;
+    }
+  }
+  .contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .wrapper__email {
+      margin-top: 5rem;
+      width: 85%;
+      .email {
+        width: 100%;
+        #send__mail {
+          top: 100%;
+          right: 10%;
+        }
+      }
+    }
+    footer {
+      width: 100%;
+      padding: 0 1rem;
+      position: relative;
+      bottom: 1rem;
+      flex-direction: column;
+      gap: 1rem;
+      text-align: left;
+      & > * {
+        width: 100%;
+      }
+      .links {
+        justify-content: flex-start;
+      }
+    }
+  }
+}
 </style>
