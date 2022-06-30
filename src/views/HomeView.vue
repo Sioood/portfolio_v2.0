@@ -6,11 +6,11 @@
         Théo Dupont, Graphiste et<br />
         Développeur Frontend
       </h1>
-      <h6 class="baseline__caption">
+      <p class="baseline__caption">
         Toujours en recherche de progression, je laisse trainer ma
         <mark>curiosité</mark>
         dans tous les domaines.
-      </h6>
+      </p>
       <div class="baseline__bottom">
         <span class="baseline__bottom__line"></span>
         <h6>me décrouvrir</h6>
@@ -18,17 +18,21 @@
       </div>
     </section>
     <section class="me">
-      <img class="logo" src="@/assets/img/logo.svg" alt="" />
+      <img
+        class="logo parallax"
+        data-parallax="3"
+        @mousemove="parallax"
+        @mouseleave="resetParallax"
+        src="@/assets/img/logo.svg"
+        alt=""
+      />
       <div class="me__wrapper__text">
-        <h2 class="me__wrapper__text__title">me</h2>
-        <p class="me__wrapper__text__caption">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a
-          lacinia nisi, ut rhoncus metus. Praesent in quam felis. Vivamus
-          fermentum euismod diam, pellentesque convallis felis dignissim ut.
-          Mauris facilisis ornare condimentum. Vivamus auctor sapien ac diam
-          scelerisque, vel maximus ligula maximus. Aliquam sed euismod mauris.
-          In hac habitasse platea dictumst. Sed at congue neque.
-        </p>
+        <h2 class="me__wrapper__text__title">About me</h2>
+        <h5 class="me__wrapper__text__caption">
+          Hello! Je suis <em>Théo</em>, Graphiste & Développeur Front-End,
+          curieux à plein temps, en apprentissage constant. Enfant d'internet je
+          me sert de celui-ci pour assouvir mon besoin de comprendre.
+        </h5>
         <div class="me__wrapper__text__citation">
           <h4 class="me__wrapper__text__citation__quote">
             "La laideur se vend mal."
@@ -38,7 +42,7 @@
       </div>
     </section>
     <section class="projects">
-      <h2>Projects</h2>
+      <h2 class="projects__title">Projects</h2>
       <div class="projects__cards">
         <Card
           v-for="project in projects"
@@ -122,6 +126,33 @@ export default {
   },
   props: ["cursorColors", "projects"],
   methods: {
+    parallax: function parallax(event) {
+      //       document.querySelectorAll(".parallax").forEach((el) => {
+      //         const score = el.getAttribute("data-parallax");
+      //         const x = (window.innerWidth - e.clientX * score) / 100;
+      //         const y = (window.innerWidth - e.clientY * score) / 100;
+
+      //         el.style.transform = `
+      //     skewX(${x}deg)
+      //     skewY(${x}deg)
+      //     translateY(${y}px)
+      // `;
+      //       });
+      const score = event.target.getAttribute("data-parallax");
+      const x = (window.innerWidth - event.clientX * score) / 100;
+      const y = (window.innerHeight - event.clientY * score) / 50;
+
+      event.target.style.transform = `
+    skewX(${x}deg)
+    translateY(${y}px)
+`;
+    },
+    resetParallax: function resetParallax(event) {
+      event.target.style.transform = `
+    skewX(0deg)
+    translateY(0px)
+`;
+    },
     easterEgg() {
       console.log("hello");
 
@@ -168,8 +199,6 @@ section {
   h1 {
     font-family: $garcia-marquez;
     text-align: center;
-    // color: transparent;
-    // -webkit-text-stroke: 0.3px white;
   }
   &__caption {
     margin: 1rem 0 0 0;
@@ -221,6 +250,10 @@ section {
   flex-direction: row;
   .logo {
     width: 30rem;
+    transition: all 0.3s ease-out;
+    // &:hover {
+    //   transition: all 0s linear;
+    // }
   }
   &__wrapper__text {
     padding: 10rem 0 0 0;
@@ -249,16 +282,20 @@ section {
 }
 
 .projects {
-  margin: 15rem 0 1rem 0;
+  margin: 15rem 0 10rem 0;
+  // position: relative;
   width: 77%;
-  // height: 100%;
+  // height: auto;
   @extend %flex-center;
   flex-direction: column;
   font-family: $garcia-marquez;
   text-align: left;
-  h2 {
-    margin: 0 0 5rem 0;
-    width: 100%;
+  &__title {
+    position: sticky;
+    top: 0px;
+    // margin: 0 0 5rem 0;
+    font-size: 10rem;
+    mix-blend-mode: difference;
   }
   &__cards {
     width: 100%;

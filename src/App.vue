@@ -250,7 +250,6 @@ export default {
   @extend %flex-center;
   flex-direction: column;
   color: var($--secondary-color);
-  overflow: hidden;
 }
 
 .cursor {

@@ -54,6 +54,7 @@ export default {
       left: 0rem;
       font-weight: 300;
       opacity: 0;
+      mix-blend-mode: difference;
       transition: all 0.5s ease-out;
       z-index: -1;
     }
