@@ -47,7 +47,7 @@ const router = createRouter({
     return new Promise((resolve, reject) => {
       to, from, savedPosition, reject;
       setTimeout(() => {
-        resolve({ top: 0, behavior: "smooth" });
+        resolve({ top: 0 });
       }, 400);
     });
   },

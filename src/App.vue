@@ -161,9 +161,14 @@ export default {
   methods: {
     cursor() {
       const cursor = document.getElementById("cursor");
+      cursor.classList.remove("cursor--hide");
 
       cursor.style.left = `${event.clientX}px`;
       cursor.style.top = `${event.clientY}px`;
+
+      setTimeout(() => {
+        cursor.classList.add("cursor--hide");
+      }, 10000);
 
       const links = document.querySelectorAll(".link");
 
@@ -273,7 +278,8 @@ export default {
   animation: shape 25s linear infinite alternate-reverse;
   z-index: -666;
   pointer-events: none;
-  &--link {
+  &--link,
+  &--hide {
     width: 0;
     height: 0;
   }
@@ -431,5 +437,16 @@ nav {
 
 .slide {
   transition: all 5s ease-in;
+}
+
+@media screen and (max-width: 768px) {
+  nav {
+    .change__mode {
+      &:hover {
+        box-shadow: 0 0 1rem 0 var($--secondary-color);
+        transition: box-shadow 0.3s ease-in-out;
+      }
+    }
+  }
 }
 </style>
