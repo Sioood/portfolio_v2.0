@@ -166,9 +166,9 @@ export default {
       cursor.style.left = `${event.clientX}px`;
       cursor.style.top = `${event.clientY}px`;
 
-      setTimeout(() => {
-        cursor.classList.add("cursor--hide");
-      }, 10000);
+      /**
+       * Need to make a function like timeout when the mouse don't move hide the cursor after a delay
+       */
 
       const links = document.querySelectorAll(".link");
 

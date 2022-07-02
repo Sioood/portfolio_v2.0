@@ -59,8 +59,8 @@
       @click="easterEgg()"
     >
       <div class="wrapper__email">
-        <h2 class="email copy" @click="copyEmail()">
-          theodupontpro@gmail.com
+        <h2 class="email copy" @click="copyEmail()">theodupontpro@gmail.com</h2>
+        <div class="container__send">
           <Button
             id="send__mail"
             text="→ send me a message"
@@ -68,7 +68,7 @@
             :router="false"
             link="mailto:theodupontpro@gmail.com?subject=Contact&body="
           />
-        </h2>
+        </div>
       </div>
       <footer>
         <h6 class="copyright">©2022</h6>
@@ -333,18 +333,20 @@ section {
   min-height: 100vh;
   .wrapper__email {
     width: 77%;
+    @extend %flex-space-between;
+    flex-direction: row;
     .email {
       position: relative;
-      width: 51%;
       font-family: $garcia-marquez;
       text-align: left;
       text-transform: uppercase;
       word-break: break-all;
       cursor: pointer;
+    }
+    .container__send {
+      padding-top: 7rem;
+      flex-grow: 1;
       #send__mail {
-        position: absolute;
-        top: 63%;
-        right: 0%;
         font-family: $aileron;
         font-size: 1rem;
       }
@@ -374,7 +376,10 @@ section {
   .contact {
     .wrapper__email {
       .email {
-        width: 55%;
+        width: 53%;
+      }
+      .container__send {
+        padding-top: 3rem;
       }
     }
   }
@@ -391,6 +396,14 @@ section {
     }
     &__wrapper__text {
       padding: 2rem 0 0 0;
+    }
+  }
+
+  .contact {
+    .wrapper__email {
+      .email {
+        font-size: 4vw;
+      }
     }
   }
 }
@@ -414,35 +427,42 @@ section {
       padding: 2rem 0 0 0;
     }
   }
+
   .contact {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
     gap: 5rem;
     .wrapper__email {
-      margin-top: 5rem;
       width: 85%;
+      flex-direction: column;
       .email {
         width: 100%;
-        #send__mail {
-          top: 100%;
-          right: 10%;
-        }
+        font-size: 8.5vw;
+      }
+      .container__send {
+        margin-top: 5rem;
+        margin: 2rem 0;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+        padding-top: 0rem;
       }
     }
     footer {
-      width: 100%;
-      padding: 0 1rem;
-      position: relative;
-      bottom: 1rem;
+      width: 77%;
+      position: absolute;
+      @extend %flex-space-between;
       flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 1rem;
-      text-align: left;
+      bottom: 1.5rem;
+      & > * {
+        font-weight: 200;
+      }
       .links {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
         justify-content: flex-start;
+        flex-wrap: wrap;
       }
     }
   }

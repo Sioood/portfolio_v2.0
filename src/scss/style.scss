@@ -95,7 +95,7 @@
 
 html {
   background: var($--main-color);
-  scroll-behavior: smooth;
+  // scroll-behavior: smooth;
   overflow-x: hidden;
 }
 
@@ -160,23 +160,23 @@ mark {
 
 @media screen and (max-width: 1280px) {
   h1 {
-    font-size: 4.115rem;
+    font-size: 4.28rem;
   }
 
   h2 {
-    font-size: 3.1rem;
+    font-size: 3.2rem;
   }
 
   h3 {
-    font-size: 2.337rem;
+    font-size: 2.393rem;
   }
 
   h4 {
-    font-size: 1.761rem;
+    font-size: 1.789rem;
   }
 
   h5 {
-    font-size: 1.327rem;
+    font-size: 1.338rem;
   }
 }
 
