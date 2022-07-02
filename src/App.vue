@@ -176,6 +176,18 @@ export default {
           cursor.classList.remove("cursor--link");
         });
       });
+
+      const copys = document.querySelectorAll(".copy");
+
+      copys.forEach((copy) => {
+        copy.addEventListener("mouseenter", () => {
+          cursor.classList.add("cursor--copy");
+        });
+
+        copy.addEventListener("mouseleave", () => {
+          cursor.classList.remove("cursor--copy");
+        });
+      });
     },
     cursorColor() {
       // console.log("enter");
@@ -244,9 +256,6 @@ export default {
 
 #app {
   // font-family: Avenir, Helvetica, Arial, sans-serif;
-  font-family: Avenir, $aileron;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   @extend %flex-center;
   flex-direction: column;
   color: var($--secondary-color);
@@ -261,12 +270,26 @@ export default {
   filter: blur(6rem);
   // transform: translate(-50%, -50%) rotate(30deg);
   transition: background 1s ease-in-out, width 0.7s ease, height 0.5s ease;
+  animation: shape 25s linear infinite alternate-reverse;
   z-index: -666;
+  pointer-events: none;
   &--link {
     width: 0;
     height: 0;
   }
-  animation: shape 25s linear infinite alternate-reverse;
+  &--copy {
+    filter: blur(0);
+    background: transparent !important;
+    animation: none;
+    &::before {
+      content: "copy";
+      font-size: 1.3rem;
+      font-style: italic;
+      font-weight: 400;
+      text-transform: uppercase;
+      color: var($--secondary-color);
+    }
+  }
 
   @keyframes shape {
     0% {

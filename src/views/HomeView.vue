@@ -59,7 +59,7 @@
       @click="easterEgg()"
     >
       <div class="wrapper__email">
-        <h2 class="email">
+        <h2 class="email copy" @click="copyEmail()">
           theodupontpro@gmail.com
           <Button
             id="send__mail"
@@ -170,6 +170,13 @@ export default {
 
       console.log("entire document height: " + height + "px");
     },
+    emailEnter() {
+      const cursorCopy = document.getElementById("cursor__copy");
+      cursorCopy.classList.add("cursor__copy--active");
+    },
+    copyEmail() {
+      navigator.clipboard.writeText("theodupontpro@gmail.com");
+    },
   },
 };
 </script>
@@ -244,10 +251,14 @@ section {
 }
 
 .me {
+  padding-top: 10rem;
   width: 77%;
   height: 110vh;
-  @extend %flex-center;
+  // @extend %flex-center;
+  display: flex;
   flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
   .logo {
     width: 30rem;
     transition: all 0.3s ease-out;
@@ -256,7 +267,7 @@ section {
     // }
   }
   &__wrapper__text {
-    padding: 10rem 0 0 0;
+    padding: 5rem 0 0 0;
     & > * {
       text-align: left;
     }
@@ -294,8 +305,7 @@ section {
     position: sticky;
     top: 0px;
     // margin: 0 0 5rem 0;
-    font-size: 10rem;
-    mix-blend-mode: difference;
+    font-size: 20vw;
   }
   &__cards {
     width: 100%;
@@ -320,7 +330,7 @@ section {
 
 .contact {
   position: relative;
-  height: 100vh;
+  min-height: 100vh;
   .wrapper__email {
     width: 77%;
     .email {
@@ -330,6 +340,7 @@ section {
       text-align: left;
       text-transform: uppercase;
       word-break: break-all;
+      cursor: pointer;
       #send__mail {
         position: absolute;
         top: 63%;
@@ -373,14 +384,13 @@ section {
   .me {
     width: 77%;
     height: auto;
-    @extend %flex-center;
-    flex-direction: column;
+    gap: 2rem;
     .logo {
       padding: 3rem 0 0 0;
-      width: 100%;
+      width: 20rem;
     }
     &__wrapper__text {
-      padding: 1rem 0 0 0;
+      padding: 2rem 0 0 0;
     }
   }
 }
@@ -393,10 +403,23 @@ section {
       line-height: 1.2;
     }
   }
+  .me {
+    flex-direction: column;
+    align-items: center;
+    .logo {
+      padding: 3rem 0 0 0;
+      width: 20rem;
+    }
+    &__wrapper__text {
+      padding: 2rem 0 0 0;
+    }
+  }
   .contact {
     display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: space-between;
+    gap: 5rem;
     .wrapper__email {
       margin-top: 5rem;
       width: 85%;
@@ -414,13 +437,28 @@ section {
       position: relative;
       bottom: 1rem;
       flex-direction: column;
+      align-items: center;
+      justify-content: center;
       gap: 1rem;
       text-align: left;
-      & > * {
-        width: 100%;
-      }
       .links {
         justify-content: flex-start;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .me {
+    .logo {
+      width: 80vw;
+    }
+  }
+
+  .contact {
+    footer {
+      .copyright {
+        width: 100%;
       }
     }
   }

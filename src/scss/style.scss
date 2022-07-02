@@ -6,6 +6,9 @@
 
 :root {
   font-size: 18px;
+  font-family: $aileron;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   line-height: 2;
   @include spread-map($theme-map-dark);
 }
@@ -100,9 +103,9 @@ html {
  * headers
  */
 
-h1,h2,h3 {
-  mix-blend-mode: difference;
-}
+// h1,h2,h3 {
+//   mix-blend-mode: difference;
+// }
 
 h1 {
   font-size: 5.378rem;
@@ -152,41 +155,115 @@ mark {
 @media screen and (max-width: 1536px) {
   :root {
     font-size: 16px;
-
   }
 }
 
 @media screen and (max-width: 1280px) {
+  h1 {
+    font-size: 4.115rem;
+  }
+
+  h2 {
+    font-size: 3.1rem;
+  }
+
+  h3 {
+    font-size: 2.337rem;
+  }
+
+  h4 {
+    font-size: 1.761rem;
+  }
+
+  h5 {
+    font-size: 1.327rem;
+  }
 }
 
 @media screen and (max-width: 1024px) {
+  h1 {
+    font-size: 3.304rem;
+  }
+
+  h2 {
+    font-size: 2.6rem;
+  }
+
+  h3 {
+    font-size: 2.048rem;
+  }
+
+  h4 {
+    font-size: 1.613rem;
+  }
+
+  h5 {
+    font-size: 1.27rem;
+  }
 }
 
 @media screen and (max-width: 768px) {
+  h1 {
+    font-size: 5.573rem;
+  }
+
+  h2 {
+    font-size: 3.953rem;
+  }
+
+  h3 {
+    font-size: 2.803rem;
+  }
+
+  h4 {
+    font-size: 1.988rem;
+  }
+
+  h5 {
+    font-size: 1.41rem;
+  }
 }
 
 @media screen and (max-width: 640px) {
   h1 {
-    font-size: 2.5rem;
+    font-size: 4.501rem;
   }
 
   h2 {
-    font-size: 2.081rem;
+    font-size: 3.3rem;
   }
-  
+
   h3 {
-    font-size: 1.732rem;
+    font-size: 2.466rem;
   }
-  
+
   h4 {
-    font-size: 1.442rem;
+    font-size: 1.825rem;
   }
-  
+
   h5 {
-    font-size: 1.201rem;
+    font-size: 1.351rem;
   }
-  
-  h6 {
-    font-size: 1rem;
+}
+
+@media screen and (max-width: 425px) {
+  h1 {
+    font-size: 2.703rem;
+  }
+
+  h2 {
+    font-size: 2.215rem;
+  }
+
+  h3 {
+    font-size: 1.816rem;
+  }
+
+  h4 {
+    font-size: 1.488rem;
+  }
+
+  h5 {
+    font-size: 1.22rem;
   }
 }
