@@ -4,7 +4,7 @@
     <section
       v-for="section in project.data.section"
       :key="section.content.type"
-      class="project__container"
+      class="project__container section"
     >
       <h5 class="project__container__title">
         {{ section.title }}

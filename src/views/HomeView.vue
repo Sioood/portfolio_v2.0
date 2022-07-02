@@ -1,6 +1,6 @@
 <template>
   <div @scroll="easterEgg()" class="page home">
-    <section class="baseline" @mouseenter="$emit('cursorColor')">
+    <section class="baseline section" @mouseenter="$emit('cursorColor')">
       <!-- add <br /> but watch out for responsive in the futur -->
       <h1>
         Théo Dupont, Graphiste et<br />
@@ -17,7 +17,7 @@
         <span class="baseline__bottom__line"></span>
       </div>
     </section>
-    <section class="me">
+    <section class="me section">
       <img
         class="logo parallax"
         data-parallax="3"
@@ -41,7 +41,7 @@
         </div>
       </div>
     </section>
-    <section class="projects">
+    <section class="projects section">
       <h2 class="projects__title">Projects</h2>
       <div class="projects__cards">
         <Card
@@ -53,7 +53,7 @@
       </div>
     </section>
     <section
-      class="contact"
+      class="contact section"
       @mouseenter="$emit('cursorColor')"
       id="egg--trigger"
       @click="easterEgg()"
@@ -71,7 +71,7 @@
         </div>
       </div>
       <footer>
-        <h6 class="copyright">©2022</h6>
+        <h6 class="copyright">©2022 Théo Dupont. All rights reserved.</h6>
         <ul class="links">
           <li>
             <Button
@@ -303,7 +303,7 @@ section {
   text-align: left;
   &__title {
     position: sticky;
-    top: 0px;
+    top: 5rem;
     // margin: 0 0 5rem 0;
     font-size: 20vw;
   }
@@ -337,6 +337,7 @@ section {
     flex-direction: row;
     .email {
       position: relative;
+      width: 45%;
       font-family: $garcia-marquez;
       text-align: left;
       text-transform: uppercase;
@@ -376,7 +377,7 @@ section {
   .contact {
     .wrapper__email {
       .email {
-        width: 53%;
+        width: 56%;
       }
       .container__send {
         padding-top: 3rem;
@@ -429,6 +430,8 @@ section {
   }
 
   .contact {
+    padding-top: 10rem;
+    justify-content: space-between;
     gap: 5rem;
     .wrapper__email {
       width: 85%;

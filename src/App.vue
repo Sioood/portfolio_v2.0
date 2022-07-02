@@ -10,34 +10,6 @@
       <div class="sun"></div>
     </div>
   </nav>
-
-  <!-- <router-view v-slot="{ Component }">
-    <transition name="slide" @beforeLeave="beforeLeave">
-      <component
-        @mouseenter="cursorColor()"
-        :cursorColors="cursorColors"
-        :is="Component"
-      />
-    </transition>
-  </router-view> -->
-
-  <!-- classic -->
-
-  <!-- <router-view v-slot="{ Component, route }">
-    <transition :name="route.meta.transitionName" mode="out-in">
-      <component
-        :key="$route.params.id"
-        @mouseenter="cursorColor()"
-        :cursorColors="cursorColors"
-        :is="Component"
-        v-on:cursorColor="cursorColor()"
-        :projects="projects"
-      />
-    </transition>
-  </router-view> -->
-
-  <!-- try to deal with different animation for index project previous and next -->
-
   <router-view v-slot="{ Component }">
     <transition :name="transitionName" mode="out-in">
       <component
@@ -50,19 +22,6 @@
       />
     </transition>
   </router-view>
-
-  <!-- <router-view v-slot="{ Component, route }">
-    <transition
-      :enter-active-class="route.meta.enterClass"
-      :leave-active-class="route.meta.leaveClass"
-    >
-      <component
-        @mouseenter="cursorColor()"
-        :cursorColors="cursorColors"
-        :is="Component"
-      />
-    </transition>
-  </router-view> -->
 </template>
 
 <script>
@@ -73,9 +32,14 @@ export default {
     return {
       // maybe not white and black for theme mode ? or add another array in changeMode()  ?
       cursorColors: [
-        ["#18ff00", "#4044e9", "#f27121"],
-        ["#47a173", "#c7fb7c", "#1b4bf4"],
-        ["#1874ba", "#feffab", "#c41c86"],
+        // Purple, Orange
+        ["#3B1877", "#DA5A2A"],
+        // Marine, Jade
+        ["#00203F", "#ADEFD1"],
+        // Light blue, orange
+        ["#7b9acc", "#F2AA4C"],
+        // pink, red
+        ["#FAD0C9", "#ed6f63"],
       ],
       projects: Projects,
       index: 0,
@@ -166,6 +130,11 @@ export default {
       cursor.style.left = `${event.clientX}px`;
       cursor.style.top = `${event.clientY}px`;
 
+      const cursorCopy = document.getElementById("cursor__copy");
+
+      cursorCopy.style.left = `${event.clientX}px`;
+      cursorCopy.style.top = `${event.clientY}px`;
+
       /**
        * Need to make a function like timeout when the mouse don't move hide the cursor after a delay
        */
@@ -182,20 +151,29 @@ export default {
         });
       });
 
+      const sections = document.querySelectorAll(".section");
+
+      sections.forEach((section) => {
+        section.addEventListener("mouseenter", () => {
+          this.cursorColor();
+        });
+      });
+
       const copys = document.querySelectorAll(".copy");
 
       copys.forEach((copy) => {
         copy.addEventListener("mouseenter", () => {
-          cursor.classList.add("cursor--copy");
+          cursorCopy.classList.add("cursor__copy--active");
+          cursor.classList.add("cursor--link");
         });
 
         copy.addEventListener("mouseleave", () => {
-          cursor.classList.remove("cursor--copy");
+          cursor.classList.remove("cursor--link");
+          cursorCopy.classList.remove("cursor__copy--active");
         });
       });
     },
     cursorColor() {
-      // console.log("enter");
       // maybe make an array with object which contain main color and second color for better associations
       const cursor = document.getElementById("cursor");
 
@@ -205,9 +183,17 @@ export default {
 
       const randomAngle = Math.floor(Math.random() * (360 - 0) + 0);
 
-      // cursor.style.background = `${this.cursorColors[randomNumber]}`;
-      // maybe 2 colors is better
-      cursor.style.background = `linear-gradient(${randomAngle}deg, ${this.cursorColors[randomColor][0]} 0%, ${this.cursorColors[randomColor][1]} 50%, ${this.cursorColors[randomColor][2]} 100%)`;
+      cursor.style.transform = `translate(-50%, -50%) rotate(${randomAngle}deg)`;
+
+      const gradient = document.getElementById("cursor__gradient");
+
+      console.log(gradient.children);
+
+      for (let i = 0; i < gradient.children.length; i++) {
+        gradient.children[
+          i
+        ].style.stopColor = `${this.cursorColors[randomColor][i]}`;
+      }
 
       // emit to children
       this.$emit("cursorColor");
@@ -268,66 +254,35 @@ export default {
 
 .cursor {
   position: fixed;
-  width: 16rem;
-  height: 25rem;
-  background: white;
+  width: 25rem;
   border-radius: 50%;
-  filter: blur(6rem);
-  // transform: translate(-50%, -50%) rotate(30deg);
+  filter: blur(3rem);
+  fill: black;
   transition: background 1s ease-in-out, width 0.7s ease, height 0.5s ease;
-  animation: shape 25s linear infinite alternate-reverse;
+  transform: translate(-50%, -50%);
   z-index: -666;
   pointer-events: none;
-  &--link,
-  &--hide {
+  &--link {
     width: 0;
     height: 0;
   }
-  &--copy {
-    filter: blur(0);
-    background: transparent !important;
-    animation: none;
-    &::before {
-      content: "copy";
-      font-size: 1.3rem;
-      font-style: italic;
-      font-weight: 400;
-      text-transform: uppercase;
-      color: var($--secondary-color);
-    }
-  }
-
-  @keyframes shape {
-    0% {
-      transform: translate(-50%, -50%) scale(80%, 50%) rotate(30deg);
-    }
-    50% {
-      transform: translate(-50%, -50%) scale(60%, 100%) rotate(90deg);
-    }
-    100% {
-      transform: translate(-50%, -50%) scale(90%, 70%) rotate(60deg);
-    }
-  }
 }
 
-// .cursor--mask {
-//   position: fixed;
-//   width: 6rem;
-//   height: 15rem;
-//   background: red;
-//   border-radius: 50%;
-//   filter: blur(5rem);
-//   transform: translate(-20%, -110%) rotate(30deg);
-//   transition: background 1s ease-in-out, width 0.7s ease, height 0.5s ease;
-
-//   // transition: background 1s ease-in-out, top 0.1s linear, left 0.1s linear,
-//   //   width 0.7s ease, height 0.5s ease;
-//   z-index: -1;
-//   &--link {
-//     width: 0;
-//     height: 0;
-//   }
-// }
+.cursor__copy {
+  display: none;
+  position: fixed;
+  font-size: 1.3rem;
+  font-style: italic;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: var($--secondary-color);
+  transform: translate(-75%, -60%);
+  pointer-events: none;
+  z-index: 1;
+  &--active {
+    display: block;
+  }
+}
 
 nav {
   width: 100%;
