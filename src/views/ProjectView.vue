@@ -16,7 +16,6 @@
             :key="content.type"
             class="project__container__content__data__content"
           >
-            <!-- hey -->
             <p
               v-if="content.type === 'text'"
               class="project__container__content__data__content__text"

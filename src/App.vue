@@ -125,7 +125,18 @@ export default {
   methods: {
     cursor() {
       const cursor = document.getElementById("cursor");
+
+      /**
+       * Need to make a function like timeout when the mouse don't move hide the cursor after a delay
+       * Add And remove a class which play animation after 10s remove and readd the class reset the time
+       * no duplication like setTimeout
+       */
+
       cursor.classList.remove("cursor--hide");
+
+      setTimeout(() => {
+        cursor.classList.add("cursor--hide");
+      }, 1);
 
       cursor.style.left = `${event.clientX}px`;
       cursor.style.top = `${event.clientY}px`;
@@ -134,10 +145,6 @@ export default {
 
       cursorCopy.style.left = `${event.clientX}px`;
       cursorCopy.style.top = `${event.clientY}px`;
-
-      /**
-       * Need to make a function like timeout when the mouse don't move hide the cursor after a delay
-       */
 
       const links = document.querySelectorAll(".link");
 
@@ -256,7 +263,7 @@ export default {
   position: fixed;
   width: 25rem;
   border-radius: 50%;
-  filter: blur(3rem);
+  filter: blur(2rem);
   fill: black;
   transition: background 1s ease-in-out, width 0.7s ease, height 0.5s ease;
   transform: translate(-50%, -50%);
@@ -265,6 +272,18 @@ export default {
   &--link {
     width: 0;
     height: 0;
+  }
+  &--hide {
+    animation: 10s linear forwards scale;
+
+    @keyframes scale {
+      99% {
+        width: 25rem;
+      }
+      100% {
+        width: 0;
+      }
+    }
   }
 }
 
