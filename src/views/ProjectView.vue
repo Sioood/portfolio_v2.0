@@ -144,8 +144,8 @@ export default {
 
 .project {
   padding: 5rem 0;
-  width: 100vw;
-  height: auto;
+  // width: 100vw;
+  // height: auto;
   @extend %flex-center;
   flex-direction: column;
   &__title {
@@ -165,6 +165,9 @@ export default {
     gap: 2rem;
     // & > * {
     //   flex: 1 1 auto !important;
+    // }
+    // &__title, &__date {
+    //   text-transform: uppercase;
     // }
     &__title {
       position: sticky;
@@ -219,6 +222,61 @@ export default {
     @extend %flex-space-between;
     a {
       color: var($--secondary-color);
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .project {
+    &__container {
+      width: 77%;
+    }
+    &__nav {
+      width: 55%;
+      @extend %flex-space-between;
+      a {
+        color: var($--secondary-color);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .project {
+    &__container {
+      position: relative;
+      margin-bottom: 4rem;
+      padding-bottom: 1rem;
+      flex-direction: column;
+      border-bottom: 0.05rem solid white;
+      // }
+      &__title,
+      &__date {
+        position: relative;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .project {
+    &__nav {
+      width: 90%;
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .project {
+    &__nav {
+      flex-direction: column;
+      gap: 1rem;
+      & > a:nth-child(1) {
+        transform: translate(-10%, 0);
+      }
+      & > a:nth-last-child(1) {
+        transform: translate(10%, 0);
+      }
     }
   }
 }
