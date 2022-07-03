@@ -1,8 +1,15 @@
 import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "../views/HomeView.vue";
 import ProjectView from "../views/ProjectView.vue";
+import NotFound from "../views/NotFound.vue";
 
 const routes = [
+  { path: "/404", component: NotFound },
+  {
+    path: "/:catchAll(.*)",
+    component: NotFound,
+    // redirect: "/404"
+  },
   {
     path: "/",
     name: "home",
