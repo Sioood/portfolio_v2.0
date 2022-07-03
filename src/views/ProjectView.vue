@@ -6,7 +6,11 @@
       :key="section.content.type"
       class="project__container section"
     >
-      <h5 class="project__container__title">
+      <h5
+        class="project__container__title"
+        data-aos="fade-up"
+        data-aos-once="false"
+      >
         {{ section.title }}
       </h5>
       <div class="project__container__content">
@@ -38,16 +42,25 @@
       <h5
         v-if="section.client && section.date"
         class="project__container__date"
+        data-aos="fade-up"
+        data-aos-once="false"
       >
         {{ section.client + " — " + section.date }}
       </h5>
       <h5
         v-else-if="!section.client && section.date"
         class="project__container__date"
+        data-aos="fade-up"
+        data-aos-once="false"
       >
         {{ section.date }}
       </h5>
-      <h5 v-else class="project__container__date">
+      <h5
+        v-else
+        class="project__container__date"
+        data-aos="fade-up"
+        data-aos-once="false"
+      >
         {{ section.client }}
       </h5>
     </section>

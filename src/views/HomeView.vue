@@ -25,30 +25,34 @@
         @mouseleave="resetParallax"
         src="@/assets/img/logo.svg"
         alt=""
+        data-aos="fade-down"
       />
       <div class="me__wrapper__text">
-        <h2 class="me__wrapper__text__title">About me</h2>
-        <h5 class="me__wrapper__text__caption">
+        <h2 class="me__wrapper__text__title" data-aos="fade-down">About me</h2>
+        <h5 class="me__wrapper__text__caption" data-aos="fade-down">
           Hello! Je suis <em>Théo</em>, Graphiste & Développeur Front-End,
-          curieux à plein temps, en apprentissage constant. Enfant d'internet je
-          me sert de celui-ci pour assouvir mon besoin de comprendre.
+          curieux à plein temps, Enfant d'internet je me sert de celui-ci
+          apprendre et comprendre constamment.
         </h5>
         <div class="me__wrapper__text__citation">
-          <h4 class="me__wrapper__text__citation__quote">
+          <h4 class="me__wrapper__text__citation__quote" data-aos="fade-down">
             "La laideur se vend mal."
           </h4>
-          <h6 class="me__wrapper__text__citation__autor">→ Raymond Loewy</h6>
+          <h6 class="me__wrapper__text__citation__autor" data-aos="fade-down">
+            → Raymond Loewy
+          </h6>
         </div>
       </div>
     </section>
     <section class="projects section">
-      <h2 class="projects__title">Projects</h2>
+      <h2 class="projects__title" data-aos="fade-down">Projects</h2>
       <div class="projects__cards">
         <Card
           v-for="project in projects"
           :key="project.id"
           :data-id="project.id"
           :project="project"
+          data-aos="fade-down"
         />
       </div>
     </section>
@@ -59,7 +63,9 @@
       @click="easterEgg()"
     >
       <div class="wrapper__email">
-        <h2 class="email copy" @click="copyEmail()">theodupontpro@gmail.com</h2>
+        <h2 class="email copy" @click="copyEmail()" data-aos="fade-down">
+          theodupontpro@gmail.com
+        </h2>
         <div class="container__send">
           <Button
             id="send__mail"
@@ -67,6 +73,7 @@
             type="secondary"
             :router="false"
             link="mailto:theodupontpro@gmail.com?subject=Contact&body="
+            data-aos="fade-down"
           />
         </div>
       </div>
