@@ -85,6 +85,12 @@ export default {
     window.addEventListener("mousemove", () => {
       this.cursor();
     });
+    window.addEventListener("click", () => {
+      const cursor = document.getElementById("cursor");
+
+      cursor.classList.remove("cursor--hide");
+      cursor.classList.remove("cursor--link");
+    });
     window.addEventListener("scroll", () => {
       var height = Math.max(
         document.body.scrollHeight,
@@ -137,7 +143,7 @@ export default {
           this.index > this.$route.params.id
         ) {
           this.transitionName = "slide-back";
-          this.index = null;
+          this.index = 0;
         } else if (
           this.$route.path.split("/")[1] == "project" &&
           this.index < this.$route.params.id
@@ -149,8 +155,11 @@ export default {
           this.index == this.projects.length
         ) {
           this.transitionName = "slide";
+        } else if (this.$route.path == "/" && this.index == undefined) {
+          this.transitionName = "";
         } else {
           this.transitionName = this.$route.meta.transitionName;
+          this.index = 0;
         }
 
         this.index = this.$route.params.id;
@@ -228,8 +237,6 @@ export default {
       cursor.style.transform = `translate(-50%, -50%) rotate(${randomAngle}deg)`;
 
       const gradient = document.getElementById("cursor__gradient");
-
-      console.log(gradient.children);
 
       for (let i = 0; i < gradient.children.length; i++) {
         gradient.children[
@@ -485,6 +492,12 @@ nav {
         transition: box-shadow 0.3s ease-in-out;
       }
     }
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .cursor__copy {
+    display: none;
   }
 }
 </style>

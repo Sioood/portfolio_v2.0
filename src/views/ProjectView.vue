@@ -9,6 +9,7 @@
       <h5
         class="project__container__title"
         data-aos="fade-up"
+        data-aos-offset="50"
         data-aos-once="false"
       >
         {{ section.title }}
@@ -43,6 +44,7 @@
         v-if="section.client && section.date"
         class="project__container__date"
         data-aos="fade-up"
+        data-aos-offset="50"
         data-aos-once="false"
       >
         {{ section.client + " — " + section.date }}
@@ -51,6 +53,7 @@
         v-else-if="!section.client && section.date"
         class="project__container__date"
         data-aos="fade-up"
+        data-aos-offset="50"
         data-aos-once="false"
       >
         {{ section.date }}
@@ -59,6 +62,7 @@
         v-else
         class="project__container__date"
         data-aos="fade-up"
+        data-aos-offset="50"
         data-aos-once="false"
       >
         {{ section.client }}

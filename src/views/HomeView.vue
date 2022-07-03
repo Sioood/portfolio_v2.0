@@ -213,6 +213,16 @@ section {
   h1 {
     font-family: $garcia-marquez;
     text-align: center;
+    animation: 0.4s ease-in-out forwards appear;
+
+    @keyframes appear {
+      from {
+        transform: translate(0, 50%);
+      }
+      to {
+        transform: translate(0, 0);
+      }
+    }
   }
   &__caption {
     margin: 1rem 0 0 0;
