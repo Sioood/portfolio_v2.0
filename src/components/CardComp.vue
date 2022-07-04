@@ -42,6 +42,9 @@ export default {
     filter: grayscale(1);
     transition: all 0.5s ease-out;
     // outline: 2px solid;
+    // &__index, &__title{
+    //   mix-blend-mode: difference;
+    // }
     &__index {
       position: absolute;
       top: 0;
@@ -54,7 +57,6 @@ export default {
       left: 0rem;
       font-weight: 300;
       opacity: 0;
-      mix-blend-mode: difference;
       transition: all 0.5s ease-out;
       z-index: -1;
     }

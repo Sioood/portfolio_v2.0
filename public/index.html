@@ -42,6 +42,13 @@
     content="Portfolio de Théo Dupont (Siod), créatif et curieux, développeur Front-End et graphiste spécialisé dans la création et la réalisation d'identité visuelle, de logo, de design web et de communication." />
   <meta property="twitter:image" content="https://theodupont.ga/assets/img/og-image.png" />
 
+  <!-- Style for hide cursor when a user stop a refresh of the page -->
+  <style>
+    .cursor,
+    .cursor__copy {
+      display: none;
+    }
+  </style>
 </head>
 
 <body>
@@ -50,6 +57,7 @@
     <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled.
         Please enable it to continue.</strong>
   </noscript>
+
   <div id="app">
   </div>
 

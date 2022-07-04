@@ -1,5 +1,5 @@
 <template>
-  <div class="page project">
+  <main class="page project">
     <h2 class="project__title">{{ project.title }}</h2>
     <section
       v-for="section in project.data.section"
@@ -108,7 +108,7 @@
         :link="`${project.id + 1}`"
       />
     </div>
-  </div>
+  </main>
 </template>
 
 <script>

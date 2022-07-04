@@ -82,6 +82,14 @@ export default {
     };
   },
   mounted: function () {
+    function logInfo() {
+      console.log(
+        "%c%s",
+        "border-radius: 6px; padding: 8px; color: #ffffff; background: #e63b3b;",
+        "🧑🏻‍💻 Developed by: Théo Dupont — https://theodupont.ga"
+      );
+    }
+    logInfo();
     window.addEventListener("mousemove", () => {
       this.cursor();
     });
@@ -91,17 +99,17 @@ export default {
       cursor.classList.remove("cursor--hide");
       cursor.classList.remove("cursor--link");
     });
-    window.addEventListener("scroll", () => {
-      var height = Math.max(
-        document.body.scrollHeight,
-        document.body.offsetHeight
-        // html.clientHeight,
-        // document.body.html.scrollHeight,
-        // document.body.html.offsetHeight
-      );
-      console.log(height);
-      console.log(window.scrollY);
-    });
+    // window.addEventListener("scroll", () => {
+    //   var height = Math.max(
+    //     document.body.scrollHeight,
+    //     document.body.offsetHeight
+    //     // html.clientHeight,
+    //     // document.body.html.scrollHeight,
+    //     // document.body.html.offsetHeight
+    //   );
+    //   // console.log(height);
+    //   // console.log(window.scrollY);
+    // });
     let step = [];
     window.addEventListener("keyup", (event) => {
       if (event.key == "s") {
@@ -294,11 +302,22 @@ export default {
 @import "@/scss/style.scss";
 // @import "@/scss/utils/_variables.scss";
 
+body {
+  height: auto;
+}
+
 #app {
+  width: 100%;
   // font-family: Avenir, Helvetica, Arial, sans-serif;
   @extend %flex-center;
   flex-direction: column;
   color: var($--secondary-color);
+}
+
+// display the cursor when the app is build
+.cursor,
+.cursor__copy {
+  display: initial;
 }
 
 .cursor {

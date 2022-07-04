@@ -1,5 +1,5 @@
 <template>
-  <div @scroll="easterEgg()" class="page home">
+  <main @scroll="easterEgg()" class="page home">
     <section class="baseline section" @mouseenter="$emit('cursorColor')">
       <!-- add <br /> but watch out for responsive in the futur -->
       <h1>
@@ -118,7 +118,7 @@
         </h6>
       </footer>
     </section>
-  </div>
+  </main>
 </template>
 
 <script>
@@ -356,6 +356,7 @@ section {
       position: relative;
       width: 45%;
       font-family: $garcia-marquez;
+      font-size: clamp(2.019rem, 4.2vw, 3.842rem);
       text-align: left;
       text-transform: uppercase;
       word-break: break-all;
@@ -410,18 +411,10 @@ section {
     gap: 2rem;
     .logo {
       padding: 3rem 0 0 0;
-      width: 20rem;
+      width: 18rem;
     }
     &__wrapper__text {
       padding: 2rem 0 0 0;
-    }
-  }
-
-  .contact {
-    .wrapper__email {
-      .email {
-        font-size: 4vw;
-      }
     }
   }
 }
@@ -455,7 +448,8 @@ section {
       flex-direction: column;
       .email {
         width: 100%;
-        font-size: 8.5vw;
+        // font-size: 8.5vw;
+        font-size: clamp(6.5vw, 8.5vw, 3.98rem);
       }
       .container__send {
         margin-top: 5rem;
@@ -493,6 +487,11 @@ section {
     .logo {
       width: 80vw;
     }
+  }
+
+  .me__wrapper__text__citation__quote {
+    font-size: clamp(1.192rem, 2vw, 1.4rem);
+    text-align: left;
   }
 
   .contact {

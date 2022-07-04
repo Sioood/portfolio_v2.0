@@ -1,5 +1,5 @@
 <template>
-  <div class="not__found">
+  <main class="not__found">
     <h1 class="not__found__title">404</h1>
     <!-- <div class="blob blob__2" style="--fill: #2e7bbb">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 274 303.2">
@@ -43,7 +43,7 @@
         ></animate>
       </path>
     </svg>
-  </div>
+  </main>
 </template>
 
 <script>
@@ -70,8 +70,8 @@ export default {
 }
 
 .blob__1 {
-  top: 15%;
-  left: 30%;
+  top: 15vh;
+  left: 30vw;
   width: 20rem;
   height: 20rem;
   z-index: -1;
