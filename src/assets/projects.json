@@ -15,7 +15,7 @@
           "content": [
             {
               "type": "text",
-              "data": "We are a <a href='/aboutabout_team.html'>team</a> of professionals working hard to provide free learning content. vamus pellentesque nibh placerat facilisis vulputate. Donec eu viverra odio, quis commodo nunc. Nulla sollicitudin eget ante et dapibus. Integer pulvinar ipsum risus, at tempor risus bibendum a. Nunc vitae feugiat ex. Vivamus posuere quam ligula, non dapibus sapien ultrices hendrerit. Vestibulum non bibendum ante, in molestie metus. In rutrum metus at est rutrum dapibus. Integer in erat aliquet, vestibulum tellus at, ultricies lacus. Etiam consectetur suscipit tellus, fringilla porttitor ex suscipit sit amet. Morbi fermentum pharetra urna eu sollicitudin. Proin nec velit vitae erat egestas eleifend. Suspendisse facilisis ex sit amet pellentesque pellentesque. Suspendisse potenti. Aenean tempor tortor ac sapien mollis, et volutpat mi egestas. Nam vitae posuere mi, ut sodales risus. Nunc varius, risus vitae porttitor dignissim, est ex commodo purus, nec fringilla orci dui nec nulla. Nam sem mi, luctus ac placerat et, consequat ac metus. Vestibulum pharetra urna id ipsum malesuada consequat. Morbi ac lectus nisl. Aliquam erat volutpat. Cras tincidunt mollis lorem, at lacinia neque rhoncus vel. Morbi malesuada, diam vitae laoreet egestas, turpis nisi consequat tortor, at scelerisque eros risus eu justo. Sed feugiat enim bibendum nulla varius bibendum non vel mi. Sed pellentesque pulvinar sapien in aliquam. Fusce posuere metus at velit auctor, in congue dui accumsan.",
+              "data": "<em>We</em> are a <a href='/aboutabout_team.html'>team</a> of professionals working hard to provide <strong>free</strong> learning content. </br> vamus pellentesque nibh placerat facilisis vulputate. Donec eu viverra odio, quis commodo nunc. Nulla sollicitudin eget ante et dapibus. Integer pulvinar ipsum risus, at tempor risus bibendum a. Nunc vitae feugiat ex. Vivamus posuere quam ligula, non dapibus sapien ultrices hendrerit. Vestibulum non bibendum ante, in molestie metus. In rutrum metus at est rutrum dapibus. Integer in erat aliquet, vestibulum tellus at, ultricies lacus. Etiam consectetur suscipit tellus, fringilla porttitor ex suscipit sit amet. Morbi fermentum pharetra urna eu sollicitudin. Proin nec velit vitae erat egestas eleifend. Suspendisse facilisis ex sit amet pellentesque pellentesque. Suspendisse potenti. Aenean tempor tortor ac sapien mollis, et volutpat mi egestas. Nam vitae posuere mi, ut sodales risus. Nunc varius, risus vitae porttitor dignissim, est ex commodo purus, nec fringilla orci dui nec nulla. Nam sem mi, luctus ac placerat et, consequat ac metus. Vestibulum pharetra urna id ipsum malesuada consequat. Morbi ac lectus nisl. Aliquam erat volutpat. Cras tincidunt mollis lorem, at lacinia neque rhoncus vel. Morbi malesuada, diam vitae laoreet egestas, turpis nisi consequat tortor, at scelerisque eros risus eu justo. Sed feugiat enim bibendum nulla varius bibendum non vel mi. Sed pellentesque pulvinar sapien in aliquam. Fusce posuere metus at velit auctor, in congue dui accumsan.",
               "alt": null
             },
             {
@@ -114,6 +114,88 @@
               "type": "img",
               "data": "inter-assurances/business-card-recto.png",
               "alt": "Carte de visite Inter Assurances recto"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": 3,
+    "title": "3D Experiments",
+    "date": null,
+    "preview": "3d-experiments/horn-gif.gif",
+    "alt": "head with horn gif which horns breathing animation",
+    "caption": "",
+    "data": {
+      "section": [
+        {
+          "title": "Bust diplacement",
+          "client": "Expérimentations",
+          "date": 2020,
+          "content": [
+            {
+              "type": "img",
+              "data": "3d-experiments/body.png",
+              "alt": "Buste en 3d avec une texture de déplacement pour donner du relief"
+            },
+            {
+              "type": "img",
+              "data": "3d-experiments/second-body.png",
+              "alt": "Buste en 3d avec une texture de déplacement pour donner du relief"
+            }
+          ]
+        },
+        {
+          "title": "Horns",
+          "client": "Expérimentation",
+          "date": 2020,
+          "content": [
+            {
+              "type": "img",
+              "data": "3d-experiments/horn-gif.gif",
+              "alt": "Tête avec des cornes en gif avec une animation de respiration sur les cornes"
+            },
+            {
+              "type": "img",
+              "data": "3d-experiments/horn.png",
+              "alt": "Tête avec des cornes avec de la pluie de sang en arrière plan"
+            }
+          ]
+        },
+        {
+          "title": "Phone Advert",
+          "client": "Expérimentation",
+          "date": 2020,
+          "content": [
+            {
+              "type": "video",
+              "data": "3d-experiments/phone-advert.mp4",
+              "alt": "Publicité de téléphone"
+            }
+          ]
+        },
+        {
+          "title": "Balancing lamp",
+          "client": "Expérimentation",
+          "date": 2020,
+          "content": [
+            {
+              "type": "video",
+              "data": "3d-experiments/lamp.mp4",
+              "alt": "Une lampe qui se balance d'elle même et qui vient éteindre ou allumer sa lumière"
+            }
+          ]
+        },
+        {
+          "title": "Cherry",
+          "client": "Expérimentation",
+          "date": 2020,
+          "content": [
+            {
+              "type": "video",
+              "data": "3d-experiments/cherry.mp4",
+              "alt": "Cerises qui se cognent entre elles comme le pendule de Newton"
             }
           ]
         }

@@ -25,16 +25,35 @@
               v-if="content.type === 'text'"
               class="project__container__content__data__content__text"
               v-html="content.data"
+            ></p>
+            <div
+              v-else-if="content.type === 'img'"
+              class="project__container__content__data__content__img"
             >
-            </p>
-            <div v-else class="project__container__content__data__content__img">
               <h6 class="project__container__content__data__content__img__alt">
-                {{ content.alt }}
+                {{ content.alt + "." }}
               </h6>
               <img
                 :src="require('@/assets/img/projects/' + content.data)"
                 :alt="content.alt"
               />
+            </div>
+            <div
+              v-else-if="content.type === 'video'"
+              class="project__container__content__data__content__video"
+            >
+              <h6 class="project__container__content__data__content__video__alt">
+                {{ content.alt + "." }}
+              </h6>
+              <video
+                loading="lazy"
+                :src="require('@/assets/img/projects/' + content.data)"
+                type="video/mp4"
+                autoplay=""
+                muted=""
+                loop=""
+                :alt="content.alt"
+              ></video>
             </div>
           </div>
         </div>
@@ -146,6 +165,11 @@ export default {
 // import only utils ?? light css
 @import "@/scss/_utils.scss";
 
+a {
+  color: var($--accent-color);
+  font-weight: 600;
+}
+
 .project {
   padding: 5rem 0;
   // width: 100vw;
@@ -194,7 +218,7 @@ export default {
             text-align: justify;
             font-weight: 300;
           }
-          &__img {
+          &__img, &__video {
             width: 100%;
             display: flex;
             flex-direction: column;
@@ -207,7 +231,7 @@ export default {
               font-style: italic;
               font-weight: 300;
             }
-            img {
+            img, video {
               width: 100%;
             }
           }
