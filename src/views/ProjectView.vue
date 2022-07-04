@@ -24,8 +24,8 @@
             <p
               v-if="content.type === 'text'"
               class="project__container__content__data__content__text"
+              v-html="content.data"
             >
-              {{ content.data }}
             </p>
             <div v-else class="project__container__content__data__content__img">
               <h6 class="project__container__content__data__content__img__alt">
