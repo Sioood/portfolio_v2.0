@@ -55,7 +55,7 @@ const router = createRouter({
       to, from, savedPosition, reject;
       setTimeout(() => {
         resolve({ top: 0 });
-      }, 400);
+      }, 550);
     });
   },
 });

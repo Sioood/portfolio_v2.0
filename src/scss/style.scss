@@ -109,36 +109,35 @@ html {
 
 h1 {
   // font-size: 5.378rem;
-  font-size: clamp(2.406rem, 6vw, 5.378rem);
+  font-size: $--font-size-h1;
 }
 
 h2 {
   // font-size: 3.842rem;
-  font-size: clamp(2.019rem, 5.5vw, 3.842rem);
-
+  font-size: $--font-size-h2;
 }
 
 h3 {
   // font-size: 2.744rem;
-  font-size: clamp(1.694rem, 5vw, 2.744rem);
+  font-size: $--font-size-h3;
 }
 
 h4 {
   // font-size: 1.96rem;
-  font-size: clamp(1.421rem, 3vw, 1.96rem);
+  font-size: $--font-size-h4;
 }
 
 h5 {
   // font-size: 1.4rem;
-  font-size: clamp(1.192rem, 2vw, 1.4rem);
+  font-size: $--font-size-h5;
 }
 
 h6 {
-  font-size: 1rem;
+  font-size: $--font-size-h6;
 }
 
 p {
-  font-size: 1rem;
+  font-size: $--font-size-h6;
 }
 
 /**

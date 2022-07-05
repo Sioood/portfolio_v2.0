@@ -44,3 +44,19 @@ $garcia-marquez: "GarciaMarquez";
 // second font
 
 $aileron: "Aileron";
+
+/**
+ * font size
+ */
+
+$--font-size-h1: clamp(2.406rem, 6vw, 5.378rem);
+
+$--font-size-h2: clamp(2.019rem, 5.5vw, 3.842rem);
+
+$--font-size-h3: clamp(1.694rem, 5vw, 2.744rem);
+
+$--font-size-h4: clamp(1.421rem, 3vw, 1.96rem);
+
+$--font-size-h5: clamp(1.192rem, 2vw, 1.4rem);
+
+$--font-size-h6: 1rem;

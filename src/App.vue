@@ -99,6 +99,11 @@ export default {
       cursor.classList.remove("cursor--hide");
       cursor.classList.remove("cursor--link");
     });
+    window.addEventListener("dblclick", () => {
+      const cursor = document.getElementById("cursor");
+
+      cursor.classList.toggle("cursor--scale");
+    });
     // window.addEventListener("scroll", () => {
     //   var height = Math.max(
     //     document.body.scrollHeight,
@@ -345,6 +350,9 @@ body {
         width: 0;
       }
     }
+  }
+  &--scale {
+    width: 200vw;
   }
 }
 

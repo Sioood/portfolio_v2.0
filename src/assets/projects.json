@@ -1,61 +1,63 @@
 [
   {
     "id": 1,
-    "title": "project 01",
-    "date": 2019,
-    "preview": "salon-du-vin/affiche.png",
-    "alt": "url",
+    "title": "Groupomania",
+    "date": null,
+    "preview": "groupomania/groupomania.png",
+    "alt": "preview du projet groupomania",
     "caption": "",
     "data": {
       "section": [
         {
-          "title": "title 1",
-          "client": "Personal project",
-          "date": 2019,
+          "title": "Réseau social d'entreprise",
+          "client": "Projet 7, OpenClassrooms",
+          "date": 2022,
           "content": [
             {
               "type": "text",
-              "data": "<em>We</em> are a <a href='/aboutabout_team.html'>team</a> of professionals working hard to provide <strong>free</strong> learning content. </br> vamus pellentesque nibh placerat facilisis vulputate. Donec eu viverra odio, quis commodo nunc. Nulla sollicitudin eget ante et dapibus. Integer pulvinar ipsum risus, at tempor risus bibendum a. Nunc vitae feugiat ex. Vivamus posuere quam ligula, non dapibus sapien ultrices hendrerit. Vestibulum non bibendum ante, in molestie metus. In rutrum metus at est rutrum dapibus. Integer in erat aliquet, vestibulum tellus at, ultricies lacus. Etiam consectetur suscipit tellus, fringilla porttitor ex suscipit sit amet. Morbi fermentum pharetra urna eu sollicitudin. Proin nec velit vitae erat egestas eleifend. Suspendisse facilisis ex sit amet pellentesque pellentesque. Suspendisse potenti. Aenean tempor tortor ac sapien mollis, et volutpat mi egestas. Nam vitae posuere mi, ut sodales risus. Nunc varius, risus vitae porttitor dignissim, est ex commodo purus, nec fringilla orci dui nec nulla. Nam sem mi, luctus ac placerat et, consequat ac metus. Vestibulum pharetra urna id ipsum malesuada consequat. Morbi ac lectus nisl. Aliquam erat volutpat. Cras tincidunt mollis lorem, at lacinia neque rhoncus vel. Morbi malesuada, diam vitae laoreet egestas, turpis nisi consequat tortor, at scelerisque eros risus eu justo. Sed feugiat enim bibendum nulla varius bibendum non vel mi. Sed pellentesque pulvinar sapien in aliquam. Fusce posuere metus at velit auctor, in congue dui accumsan.",
+              "data": "Projet 7 du parcours développeur web d'OpenClassrooms, l'objectif de celui-ci est de réaliser le back-end et le front-end d'un réseau social d'entreprise. Il se constitue de: </br> - la création d'une base de données SQL avec MySQL,</br> - de la mise en place d'une api CRUD REST basée sur Node.js, Express & Sequelize, </br> - Réalisation d'une maquette et intégration de celle-ci avec Vue.js (Vue, Vue x, Vue router), CSS, </br> - Sécurisation sous les normes RGPD & OWASP, Protection d'authentification, des champs de formulaires.",
               "alt": null
-            },
-            {
-              "type": "img",
-              "data": "salon-du-vin/affiche.png",
-              "alt": "Affiche du salon du vin et des terroirs"
             }
           ]
         },
         {
-          "title": "Title project",
-          "client": null,
-          "date": 2019,
+          "title": "Réseau social d'entreprise",
+          "client": "Projet 7, OpenClassrooms",
+          "date": 2022,
           "content": [
             {
-              "type": "text",
-              "data": "vamus pellentesque nibh placerat facilisis vulputate. Donec eu viverra odio, quis commodo nunc. Nulla sollicitudin eget ante et dapibus. Integer pulvinar ipsum risus, at tempor risus bibendum a. Nunc vitae feugiat ex. Vivamus posuere quam ligula, non dapibus sapien ultrices hendrerit. Vestibulum non bibendum ante, in molestie metus. In rutrum metus at est rutrum dapibus. Integer in erat aliquet, vestibulum tellus at, ultricies lacus. Etiam consectetur suscipit tellus, fringilla porttitor ex suscipit sit amet. Morbi fermentum pharetra urna eu sollicitudin. Proin nec velit vitae erat egestas eleifend. Suspendisse facilisis ex sit amet pellentesque pellentesque. Suspendisse potenti. Aenean tempor tortor ac sapien mollis, et volutpat mi egestas. Nam vitae posuere mi, ut sodales risus. Nunc varius, risus vitae porttitor dignissim, est ex commodo purus, nec fringilla orci dui nec nulla. Nam sem mi, luctus ac placerat et, consequat ac metus. Vestibulum pharetra urna id ipsum malesuada consequat. Morbi ac lectus nisl. Aliquam erat volutpat. Cras tincidunt mollis lorem, at lacinia neque rhoncus vel. Morbi malesuada, diam vitae laoreet egestas, turpis nisi consequat tortor, at scelerisque eros risus eu justo. Sed feugiat enim bibendum nulla varius bibendum non vel mi. Sed pellentesque pulvinar sapien in aliquam. Fusce posuere metus at velit auctor, in congue dui accumsan.",
-              "alt": null
-            },
-            {
               "type": "img",
-              "data": "salon-du-vin/affiche.png",
-              "alt": "Affiche du salon du vin et des terroirs"
+              "data": "groupomania/signup.png",
+              "alt": "Page de connection de groupomania"
             }
           ]
         },
         {
-          "title": "title 1",
-          "client": "Personal project",
-          "date": null,
+          "title": "Page d'acceuil",
+          "client": "Projet 7, OpenClassrooms",
+          "date": 2022,
           "content": [
             {
-              "type": "text",
-              "data": "vamus pellentesque nibh placerat facilisis vulputate. Donec eu viverra odio, quis commodo nunc. Nulla sollicitudin eget ante et dapibus. Integer pulvinar ipsum risus, at tempor risus bibendum a. Nunc vitae feugiat ex. Vivamus posuere quam ligula, non dapibus sapien ultrices hendrerit. Vestibulum non bibendum ante, in molestie metus. In rutrum metus at est rutrum dapibus. Integer in erat aliquet, vestibulum tellus at, ultricies lacus. Etiam consectetur suscipit tellus, fringilla porttitor ex suscipit sit amet. Morbi fermentum pharetra urna eu sollicitudin. Proin nec velit vitae erat egestas eleifend. Suspendisse facilisis ex sit amet pellentesque pellentesque. Suspendisse potenti. Aenean tempor tortor ac sapien mollis, et volutpat mi egestas. Nam vitae posuere mi, ut sodales risus. Nunc varius, risus vitae porttitor dignissim, est ex commodo purus, nec fringilla orci dui nec nulla. Nam sem mi, luctus ac placerat et, consequat ac metus. Vestibulum pharetra urna id ipsum malesuada consequat. Morbi ac lectus nisl. Aliquam erat volutpat. Cras tincidunt mollis lorem, at lacinia neque rhoncus vel. Morbi malesuada, diam vitae laoreet egestas, turpis nisi consequat tortor, at scelerisque eros risus eu justo. Sed feugiat enim bibendum nulla varius bibendum non vel mi. Sed pellentesque pulvinar sapien in aliquam. Fusce posuere metus at velit auctor, in congue dui accumsan.",
-              "alt": null
-            },
+              "type": "img",
+              "data": "groupomania/home.png",
+              "alt": "Page d'acceuil de groupomania"
+            }
+          ]
+        },
+        {
+          "title": "Page de profil",
+          "client": "Projet 7, OpenClassrooms",
+          "date": 2022,
+          "content": [
             {
               "type": "img",
-              "data": "salon-du-vin/affiche.png",
-              "alt": "Affiche du salon du vin et des terroirs"
+              "data": "groupomania/profil.png",
+              "alt": "Page d'un profil utilisateur de groupomania"
+            },
+            {
+              "type": "text",
+              "data": "Lien du repository <a target='_blank' href='https://github.com/Sioood/P7-Groupomania-OC'>Github</a> du projet.",
+              "alt": "Page d'un profil utilisateur de groupomania"
             }
           ]
         }
@@ -122,6 +124,145 @@
   },
   {
     "id": 3,
+    "title": "Le jardin de Servins",
+    "date": 2017,
+    "preview": "le-jardin-de-servins/logo-jardin-de-servins.png",
+    "alt": "logo du jardin de Servins",
+    "caption": "",
+    "data": {
+      "section": [
+        {
+          "title": "Le logo",
+
+          "client": "<a target='_blank' href='https://www.facebook.com/lejardindeservins/'>Le jardin de Servins</a>",
+          "date": 2017,
+          "content": [
+            {
+              "type": "text",
+              "data": "Le Jardin de Servins c'est une self-ceuillette situé à 15 minutes de Liévin, à sa création en 2017 j'ai eu l'occasion de réaliser leur logo ci-dessous.",
+              "alt": null
+            },
+            {
+              "type": "img",
+              "data": "le-jardin-de-servins/logo-jardin-de-servins.png",
+              "alt": "logo du jardin de Servins "
+            },
+            {
+              "type": "img",
+              "data": "le-jardin-de-servins/panneaux-jardin-de-servins.png",
+              "alt": "logo du jardin de Servins "
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": 4,
+    "title": "project 01",
+    "date": 2019,
+    "preview": "salon-du-vin/affiche.png",
+    "alt": "url",
+    "caption": "",
+    "data": {
+      "section": [
+        {
+          "title": "title 1",
+          "client": "Personal project",
+          "date": 2019,
+          "content": [
+            {
+              "type": "text",
+              "data": "<em>We</em> are a <a href='/aboutabout_team.html'>team</a> of professionals working hard to provide <strong>free</strong> learning content. </br> vamus pellentesque nibh placerat facilisis vulputate. Donec eu viverra odio, quis commodo nunc. Nulla sollicitudin eget ante et dapibus. Integer pulvinar ipsum risus, at tempor risus bibendum a. Nunc vitae feugiat ex. Vivamus posuere quam ligula, non dapibus sapien ultrices hendrerit. Vestibulum non bibendum ante, in molestie metus. In rutrum metus at est rutrum dapibus. Integer in erat aliquet, vestibulum tellus at, ultricies lacus. Etiam consectetur suscipit tellus, fringilla porttitor ex suscipit sit amet. Morbi fermentum pharetra urna eu sollicitudin. Proin nec velit vitae erat egestas eleifend. Suspendisse facilisis ex sit amet pellentesque pellentesque. Suspendisse potenti. Aenean tempor tortor ac sapien mollis, et volutpat mi egestas. Nam vitae posuere mi, ut sodales risus. Nunc varius, risus vitae porttitor dignissim, est ex commodo purus, nec fringilla orci dui nec nulla. Nam sem mi, luctus ac placerat et, consequat ac metus. Vestibulum pharetra urna id ipsum malesuada consequat. Morbi ac lectus nisl. Aliquam erat volutpat. Cras tincidunt mollis lorem, at lacinia neque rhoncus vel. Morbi malesuada, diam vitae laoreet egestas, turpis nisi consequat tortor, at scelerisque eros risus eu justo. Sed feugiat enim bibendum nulla varius bibendum non vel mi. Sed pellentesque pulvinar sapien in aliquam. Fusce posuere metus at velit auctor, in congue dui accumsan.",
+              "alt": null
+            },
+            {
+              "type": "img",
+              "data": "salon-du-vin/affiche.png",
+              "alt": "Affiche du salon du vin et des terroirs"
+            }
+          ]
+        },
+        {
+          "title": "Title project",
+          "client": null,
+          "date": 2019,
+          "content": [
+            {
+              "type": "text",
+              "data": "vamus pellentesque nibh placerat facilisis vulputate. Donec eu viverra odio, quis commodo nunc. Nulla sollicitudin eget ante et dapibus. Integer pulvinar ipsum risus, at tempor risus bibendum a. Nunc vitae feugiat ex. Vivamus posuere quam ligula, non dapibus sapien ultrices hendrerit. Vestibulum non bibendum ante, in molestie metus. In rutrum metus at est rutrum dapibus. Integer in erat aliquet, vestibulum tellus at, ultricies lacus. Etiam consectetur suscipit tellus, fringilla porttitor ex suscipit sit amet. Morbi fermentum pharetra urna eu sollicitudin. Proin nec velit vitae erat egestas eleifend. Suspendisse facilisis ex sit amet pellentesque pellentesque. Suspendisse potenti. Aenean tempor tortor ac sapien mollis, et volutpat mi egestas. Nam vitae posuere mi, ut sodales risus. Nunc varius, risus vitae porttitor dignissim, est ex commodo purus, nec fringilla orci dui nec nulla. Nam sem mi, luctus ac placerat et, consequat ac metus. Vestibulum pharetra urna id ipsum malesuada consequat. Morbi ac lectus nisl. Aliquam erat volutpat. Cras tincidunt mollis lorem, at lacinia neque rhoncus vel. Morbi malesuada, diam vitae laoreet egestas, turpis nisi consequat tortor, at scelerisque eros risus eu justo. Sed feugiat enim bibendum nulla varius bibendum non vel mi. Sed pellentesque pulvinar sapien in aliquam. Fusce posuere metus at velit auctor, in congue dui accumsan.",
+              "alt": null
+            },
+            {
+              "type": "img",
+              "data": "salon-du-vin/affiche.png",
+              "alt": "Affiche du salon du vin et des terroirs"
+            }
+          ]
+        },
+        {
+          "title": "title 1",
+          "client": "Personal project",
+          "date": null,
+          "content": [
+            {
+              "type": "text",
+              "data": "vamus pellentesque nibh placerat facilisis vulputate. Donec eu viverra odio, quis commodo nunc. Nulla sollicitudin eget ante et dapibus. Integer pulvinar ipsum risus, at tempor risus bibendum a. Nunc vitae feugiat ex. Vivamus posuere quam ligula, non dapibus sapien ultrices hendrerit. Vestibulum non bibendum ante, in molestie metus. In rutrum metus at est rutrum dapibus. Integer in erat aliquet, vestibulum tellus at, ultricies lacus. Etiam consectetur suscipit tellus, fringilla porttitor ex suscipit sit amet. Morbi fermentum pharetra urna eu sollicitudin. Proin nec velit vitae erat egestas eleifend. Suspendisse facilisis ex sit amet pellentesque pellentesque. Suspendisse potenti. Aenean tempor tortor ac sapien mollis, et volutpat mi egestas. Nam vitae posuere mi, ut sodales risus. Nunc varius, risus vitae porttitor dignissim, est ex commodo purus, nec fringilla orci dui nec nulla. Nam sem mi, luctus ac placerat et, consequat ac metus. Vestibulum pharetra urna id ipsum malesuada consequat. Morbi ac lectus nisl. Aliquam erat volutpat. Cras tincidunt mollis lorem, at lacinia neque rhoncus vel. Morbi malesuada, diam vitae laoreet egestas, turpis nisi consequat tortor, at scelerisque eros risus eu justo. Sed feugiat enim bibendum nulla varius bibendum non vel mi. Sed pellentesque pulvinar sapien in aliquam. Fusce posuere metus at velit auctor, in congue dui accumsan.",
+              "alt": null
+            },
+            {
+              "type": "img",
+              "data": "salon-du-vin/affiche.png",
+              "alt": "Affiche du salon du vin et des terroirs"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": 5,
+    "title": "Akolade",
+    "date": 2020,
+    "preview": "akolade/logo-akolade.png",
+    "alt": "logo tiers-lieu numérique de soissons akolade",
+    "caption": "",
+    "data": {
+      "section": [
+        {
+          "title": "Tiers-lieu numérique",
+          "client": "<a target='_blank' href='http://agglo.grandsoissons.com/votre-agglo/les-grands-projets/le-parc-gouraud-948.html'>Parc Gouraud de Soissons</a>",
+          "date": 2019,
+          "content": [
+            {
+              "type": "text",
+              "data": "Akolade est né du projet <i>Tiers-lieu Numérique</i> du parc Gouraud situé en plein Soissons, son but étant de pouvoir rassembler des outils numérique dans un même lieu public, du simple ordinateur au matériel présent dans des FabLab tel que des découpeuses lasers, imprimantes 3D... La possibilité de pouvoir former des gens sur certains logiciels et sur ces mêmes machines. Pour ce projet le parc Gouraud à fait la demande de réalisation de son identité visuelle au Lycée Saint Vincent de Paul lors de mon BTS Design Graphique.",
+              "alt": null
+            }
+          ]
+        },
+        {
+          "title": "Le concept",
+          "client": "",
+          "date": null,
+          "content": [
+            {
+              "type": "text",
+              "data": "Le parc Gouraud étant une pépinière d'entreprise et un lieu de co-working, j'ai pris comme base l’idée de <bold>résonance</bold> que regroupe tout les éléments de celui-ci, que ce soit par les connaissances et l’encadrement que peut apporter le Parc soit par les liens de chaque spécificités et utilités des batiments et métiers , qu’un métier ou un bâtiment puissent aider un autre signifie et impose la base de <bold>l’entraide et de l’accompagnement</bold>.",
+              "alt": "Affiche du salon du vin et des terroirs"
+            },
+            {
+              "type": "img",
+              "data": "akolade/logo-akolade.png",
+              "alt": "logo tiers-lieu numérique de soissons akolade"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": 4,
     "title": "3D Experiments",
     "date": null,
     "preview": "3d-experiments/horn-gif.gif",

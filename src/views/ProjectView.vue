@@ -42,7 +42,9 @@
               v-else-if="content.type === 'video'"
               class="project__container__content__data__content__video"
             >
-              <h6 class="project__container__content__data__content__video__alt">
+              <h6
+                class="project__container__content__data__content__video__alt"
+              >
                 {{ content.alt + "." }}
               </h6>
               <video
@@ -65,9 +67,8 @@
         data-aos="fade-up"
         data-aos-offset="50"
         data-aos-once="false"
-      >
-        {{ section.client + " — " + section.date }}
-      </h5>
+        v-html="section.client + ' — ' + section.date"
+      ></h5>
       <h5
         v-else-if="!section.client && section.date"
         class="project__container__date"
@@ -83,9 +84,8 @@
         data-aos="fade-up"
         data-aos-offset="50"
         data-aos-once="false"
-      >
-        {{ section.client }}
-      </h5>
+        v-html="section.client"
+      ></h5>
     </section>
     <div class="project__nav">
       <!-- <router-link v-if="project.id == 1" to="/">← back to home</router-link> -->
@@ -145,9 +145,9 @@ export default {
       project: this.projects[this.$route.params.id - 1],
     };
   },
-  updated() {
-    console.log(this.project.id + " " + this.projects.length);
-  },
+  // updated() {
+  //   console.log(this.project.id + " " + this.projects.length);
+  // },
   watch: {
     $route: {
       immediate: true,
@@ -165,9 +165,9 @@ export default {
 // import only utils ?? light css
 @import "@/scss/_utils.scss";
 
-a {
-  color: var($--accent-color);
-  font-weight: 600;
+h5 > a {
+  color: var($--secondary-color);
+  font-size: $--font-size-h5;
 }
 
 .project {
@@ -186,7 +186,7 @@ a {
   &__container {
     position: relative;
     margin-bottom: 3rem;
-    width: 63%;
+    width: 63vw;
     display: flex;
     flex-direction: row;
     align-items: baseline;
@@ -208,6 +208,10 @@ a {
     &__content {
       width: 100%;
       flex: 1 1 50%;
+      a {
+        color: var($--accent-color);
+        font-weight: 600;
+      }
       &__data {
         @extend %flex-center;
         flex-direction: column;
@@ -218,7 +222,8 @@ a {
             text-align: justify;
             font-weight: 300;
           }
-          &__img, &__video {
+          &__img,
+          &__video {
             width: 100%;
             display: flex;
             flex-direction: column;
@@ -231,7 +236,8 @@ a {
               font-style: italic;
               font-weight: 300;
             }
-            img, video {
+            img,
+            video {
               width: 100%;
             }
           }
@@ -257,7 +263,7 @@ a {
 @media screen and (max-width: 1024px) {
   .project {
     &__container {
-      width: 77%;
+      width: 77vw;
     }
     &__nav {
       width: 55%;

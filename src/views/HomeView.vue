@@ -482,6 +482,15 @@ section {
   }
 }
 
+@media screen and (max-width: 640px) {
+  .projects {
+    width: 70%;
+    &__cards {
+      gap: 15rem 5rem;
+    }
+  }
+}
+
 @media screen and (max-width: 425px) {
   .me {
     .logo {
