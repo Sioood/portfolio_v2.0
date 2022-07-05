@@ -74,47 +74,23 @@
     "data": {
       "section": [
         {
-          "title": "title 1",
-          "client": "Personal project",
-          "date": 2019,
+          "title": "Logo & carte de visite",
+          "client": "Inter Assurances Hazebrouck",
+          "date": 2021,
           "content": [
             {
-              "type": "text",
-              "data": "vamus pellentesque nibh placerat facilisis vulputate. Donec eu viverra odio, quis commodo nunc. Nulla sollicitudin eget ante et dapibus. Integer pulvinar ipsum risus, at tempor risus bibendum a. Nunc vitae feugiat ex. Vivamus posuere quam ligula, non dapibus sapien ultrices hendrerit. Vestibulum non bibendum ante, in molestie metus. In rutrum metus at est rutrum dapibus. Integer in erat aliquet, vestibulum tellus at, ultricies lacus. Etiam consectetur suscipit tellus, fringilla porttitor ex suscipit sit amet. Morbi fermentum pharetra urna eu sollicitudin. Proin nec velit vitae erat egestas eleifend. Suspendisse facilisis ex sit amet pellentesque pellentesque. Suspendisse potenti. Aenean tempor tortor ac sapien mollis, et volutpat mi egestas. Nam vitae posuere mi, ut sodales risus. Nunc varius, risus vitae porttitor dignissim, est ex commodo purus, nec fringilla orci dui nec nulla. Nam sem mi, luctus ac placerat et, consequat ac metus. Vestibulum pharetra urna id ipsum malesuada consequat. Morbi ac lectus nisl. Aliquam erat volutpat. Cras tincidunt mollis lorem, at lacinia neque rhoncus vel. Morbi malesuada, diam vitae laoreet egestas, turpis nisi consequat tortor, at scelerisque eros risus eu justo. Sed feugiat enim bibendum nulla varius bibendum non vel mi. Sed pellentesque pulvinar sapien in aliquam. Fusce posuere metus at velit auctor, in congue dui accumsan.",
-              "alt": null
+              "type": "img",
+              "data": "inter-assurances/logo-inter-assurances.png",
+              "alt": "Carte de visite Inter Assurances recto"
             },
             {
               "type": "img",
               "data": "inter-assurances/business-card-recto.png",
               "alt": "Carte de visite Inter Assurances recto"
-            }
-          ]
-        },
-        {
-          "title": "Title project",
-          "client": null,
-          "date": 2019,
-          "content": [
-            {
-              "type": "img",
-              "data": "inter-assurances/business-card-recto.png",
-              "alt": "Carte de visite Inter Assurances recto"
-            }
-          ]
-        },
-        {
-          "title": "title 1",
-          "client": "Personal project",
-          "date": null,
-          "content": [
-            {
-              "type": "text",
-              "data": "vamus pellentesque nibh placerat facilisis vulputate. Donec eu viverra odio, quis commodo nunc. Nulla sollicitudin eget ante et dapibus. Integer pulvinar ipsum risus, at tempor risus bibendum a. Nunc vitae feugiat ex. Vivamus posuere quam ligula, non dapibus sapien ultrices hendrerit. Vestibulum non bibendum ante, in molestie metus. In rutrum metus at est rutrum dapibus. Integer in erat aliquet, vestibulum tellus at, ultricies lacus. Etiam consectetur suscipit tellus, fringilla porttitor ex suscipit sit amet. Morbi fermentum pharetra urna eu sollicitudin. Proin nec velit vitae erat egestas eleifend. Suspendisse facilisis ex sit amet pellentesque pellentesque. Suspendisse potenti. Aenean tempor tortor ac sapien mollis, et volutpat mi egestas. Nam vitae posuere mi, ut sodales risus. Nunc varius, risus vitae porttitor dignissim, est ex commodo purus, nec fringilla orci dui nec nulla. Nam sem mi, luctus ac placerat et, consequat ac metus. Vestibulum pharetra urna id ipsum malesuada consequat. Morbi ac lectus nisl. Aliquam erat volutpat. Cras tincidunt mollis lorem, at lacinia neque rhoncus vel. Morbi malesuada, diam vitae laoreet egestas, turpis nisi consequat tortor, at scelerisque eros risus eu justo. Sed feugiat enim bibendum nulla varius bibendum non vel mi. Sed pellentesque pulvinar sapien in aliquam. Fusce posuere metus at velit auctor, in congue dui accumsan.",
-              "alt": null
             },
             {
               "type": "img",
-              "data": "inter-assurances/business-card-recto.png",
+              "data": "inter-assurances/business-card-verso.png",
               "alt": "Carte de visite Inter Assurances recto"
             }
           ]
@@ -159,7 +135,7 @@
   },
   {
     "id": 4,
-    "title": "project 01",
+    "title": "Le salon du vins et des terroirs",
     "date": 2019,
     "preview": "salon-du-vin/affiche.png",
     "alt": "url",
@@ -167,53 +143,24 @@
     "data": {
       "section": [
         {
-          "title": "title 1",
-          "client": "Personal project",
+          "title": "l'Affiche",
+          "client": " <a target='_blank' href='www.villeneuve-st-germain.fr'>Villeneuve Saint Germain</a> ",
           "date": 2019,
           "content": [
             {
               "type": "text",
-              "data": "<em>We</em> are a <a href='/aboutabout_team.html'>team</a> of professionals working hard to provide <strong>free</strong> learning content. </br> vamus pellentesque nibh placerat facilisis vulputate. Donec eu viverra odio, quis commodo nunc. Nulla sollicitudin eget ante et dapibus. Integer pulvinar ipsum risus, at tempor risus bibendum a. Nunc vitae feugiat ex. Vivamus posuere quam ligula, non dapibus sapien ultrices hendrerit. Vestibulum non bibendum ante, in molestie metus. In rutrum metus at est rutrum dapibus. Integer in erat aliquet, vestibulum tellus at, ultricies lacus. Etiam consectetur suscipit tellus, fringilla porttitor ex suscipit sit amet. Morbi fermentum pharetra urna eu sollicitudin. Proin nec velit vitae erat egestas eleifend. Suspendisse facilisis ex sit amet pellentesque pellentesque. Suspendisse potenti. Aenean tempor tortor ac sapien mollis, et volutpat mi egestas. Nam vitae posuere mi, ut sodales risus. Nunc varius, risus vitae porttitor dignissim, est ex commodo purus, nec fringilla orci dui nec nulla. Nam sem mi, luctus ac placerat et, consequat ac metus. Vestibulum pharetra urna id ipsum malesuada consequat. Morbi ac lectus nisl. Aliquam erat volutpat. Cras tincidunt mollis lorem, at lacinia neque rhoncus vel. Morbi malesuada, diam vitae laoreet egestas, turpis nisi consequat tortor, at scelerisque eros risus eu justo. Sed feugiat enim bibendum nulla varius bibendum non vel mi. Sed pellentesque pulvinar sapien in aliquam. Fusce posuere metus at velit auctor, in congue dui accumsan.",
+              "data": "Affiche du salon du vins et des terroirs 2019 de la ville de Villeneuve Saint Germain, réalisé lors d'un workshop à la demande de la ville pendant mon BTS Design Graphique.",
               "alt": null
             },
             {
               "type": "img",
               "data": "salon-du-vin/affiche.png",
               "alt": "Affiche du salon du vin et des terroirs"
-            }
-          ]
-        },
-        {
-          "title": "Title project",
-          "client": null,
-          "date": 2019,
-          "content": [
-            {
-              "type": "text",
-              "data": "vamus pellentesque nibh placerat facilisis vulputate. Donec eu viverra odio, quis commodo nunc. Nulla sollicitudin eget ante et dapibus. Integer pulvinar ipsum risus, at tempor risus bibendum a. Nunc vitae feugiat ex. Vivamus posuere quam ligula, non dapibus sapien ultrices hendrerit. Vestibulum non bibendum ante, in molestie metus. In rutrum metus at est rutrum dapibus. Integer in erat aliquet, vestibulum tellus at, ultricies lacus. Etiam consectetur suscipit tellus, fringilla porttitor ex suscipit sit amet. Morbi fermentum pharetra urna eu sollicitudin. Proin nec velit vitae erat egestas eleifend. Suspendisse facilisis ex sit amet pellentesque pellentesque. Suspendisse potenti. Aenean tempor tortor ac sapien mollis, et volutpat mi egestas. Nam vitae posuere mi, ut sodales risus. Nunc varius, risus vitae porttitor dignissim, est ex commodo purus, nec fringilla orci dui nec nulla. Nam sem mi, luctus ac placerat et, consequat ac metus. Vestibulum pharetra urna id ipsum malesuada consequat. Morbi ac lectus nisl. Aliquam erat volutpat. Cras tincidunt mollis lorem, at lacinia neque rhoncus vel. Morbi malesuada, diam vitae laoreet egestas, turpis nisi consequat tortor, at scelerisque eros risus eu justo. Sed feugiat enim bibendum nulla varius bibendum non vel mi. Sed pellentesque pulvinar sapien in aliquam. Fusce posuere metus at velit auctor, in congue dui accumsan.",
-              "alt": null
             },
             {
               "type": "img",
-              "data": "salon-du-vin/affiche.png",
-              "alt": "Affiche du salon du vin et des terroirs"
-            }
-          ]
-        },
-        {
-          "title": "title 1",
-          "client": "Personal project",
-          "date": null,
-          "content": [
-            {
-              "type": "text",
-              "data": "vamus pellentesque nibh placerat facilisis vulputate. Donec eu viverra odio, quis commodo nunc. Nulla sollicitudin eget ante et dapibus. Integer pulvinar ipsum risus, at tempor risus bibendum a. Nunc vitae feugiat ex. Vivamus posuere quam ligula, non dapibus sapien ultrices hendrerit. Vestibulum non bibendum ante, in molestie metus. In rutrum metus at est rutrum dapibus. Integer in erat aliquet, vestibulum tellus at, ultricies lacus. Etiam consectetur suscipit tellus, fringilla porttitor ex suscipit sit amet. Morbi fermentum pharetra urna eu sollicitudin. Proin nec velit vitae erat egestas eleifend. Suspendisse facilisis ex sit amet pellentesque pellentesque. Suspendisse potenti. Aenean tempor tortor ac sapien mollis, et volutpat mi egestas. Nam vitae posuere mi, ut sodales risus. Nunc varius, risus vitae porttitor dignissim, est ex commodo purus, nec fringilla orci dui nec nulla. Nam sem mi, luctus ac placerat et, consequat ac metus. Vestibulum pharetra urna id ipsum malesuada consequat. Morbi ac lectus nisl. Aliquam erat volutpat. Cras tincidunt mollis lorem, at lacinia neque rhoncus vel. Morbi malesuada, diam vitae laoreet egestas, turpis nisi consequat tortor, at scelerisque eros risus eu justo. Sed feugiat enim bibendum nulla varius bibendum non vel mi. Sed pellentesque pulvinar sapien in aliquam. Fusce posuere metus at velit auctor, in congue dui accumsan.",
-              "alt": null
-            },
-            {
-              "type": "img",
-              "data": "salon-du-vin/affiche.png",
-              "alt": "Affiche du salon du vin et des terroirs"
+              "data": "salon-du-vin/mockup-salon-du-vin.png",
+              "alt": "Affiche du salon du vin et des terroirs sur un mockup"
             }
           ]
         }
@@ -255,6 +202,16 @@
               "type": "img",
               "data": "akolade/logo-akolade.png",
               "alt": "logo tiers-lieu numérique de soissons akolade"
+            },
+            {
+              "type": "img",
+              "data": "akolade/mockup-banner.png",
+              "alt": "logo tiers-lieu numérique de soissons akolade"
+            },
+            {
+              "type": "img",
+              "data": "akolade/mockup-business-card.png",
+              "alt": "logo tiers-lieu numérique de soissons akolade"
             }
           ]
         }
@@ -262,7 +219,36 @@
     }
   },
   {
-    "id": 4,
+    "id": 6,
+    "title": "Betraying the martyrs",
+    "date": 2020,
+    "preview": "btm/both.png",
+    "alt": "",
+    "caption": "",
+    "data": {
+      "section": [
+        {
+          "title": "Cover de l'album Rapture",
+          "client": "Projet de cover fictive",
+          "date": 2020,
+          "content": [
+            {
+              "type": "img",
+              "data": "btm/btm-recto.png",
+              "alt": "cover betraying the martyrs recto"
+            },
+            {
+              "type": "img",
+              "data": "btm/btm-verso.png",
+              "alt": "cover betraying the martyrs verso"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": 7,
     "title": "3D Experiments",
     "date": null,
     "preview": "3d-experiments/horn-gif.gif",
@@ -270,6 +256,23 @@
     "caption": "",
     "data": {
       "section": [
+        {
+          "title": "Come a butterfly",
+          "client": "Expérimentations",
+          "date": 2022,
+          "content": [
+            {
+              "type": "img",
+              "data": "3d-experiments/geisha-come-a-butterfly.png",
+              "alt": "Geisha en pleine chute dans un miroir, réalisation 3d"
+            },
+            {
+              "type": "img",
+              "data": "3d-experiments/geisha-face.png",
+              "alt": "Zoom sur le visage de la Geisha en pleine chute dans un miroir, réalisation 3d"
+            }
+          ]
+        },
         {
           "title": "Bust diplacement",
           "client": "Expérimentations",

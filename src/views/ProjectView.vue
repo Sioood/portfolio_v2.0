@@ -182,6 +182,9 @@ h5 > a {
     font-family: $garcia-marquez;
     font-weight: normal;
     text-align: center;
+    &:target {
+      color: green;
+    }
   }
   &__container {
     position: relative;

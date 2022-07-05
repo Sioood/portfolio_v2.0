@@ -307,6 +307,16 @@ export default {
 @import "@/scss/style.scss";
 // @import "@/scss/utils/_variables.scss";
 
+.zoom {
+  position: fixed;
+  top: 2.5%;
+  left: 0;
+  width: auto;
+  height: 95vh;
+  object-fit: contain;
+  transition: all 1s ease-out;
+}
+
 body {
   height: auto;
 }
