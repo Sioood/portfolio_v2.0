@@ -285,7 +285,7 @@ h5 > a {
       margin-bottom: 4rem;
       padding-bottom: 1rem;
       flex-direction: column;
-      border-bottom: 0.05rem solid white;
+      border-bottom: 0.05rem solid var($--secondary-color);
       // }
       &__title,
       &__date {
