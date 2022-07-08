@@ -63,11 +63,17 @@
       @click="easterEgg()"
     >
       <div class="wrapper__email">
-        <h2 class="email copy" @click="copyEmail()" data-aos="fade-down">
+        <h2
+          data-splitbee-event="Home Mail-copy"
+          class="email copy"
+          @click="copyEmail()"
+          data-aos="fade-down"
+        >
           theodupontpro@gmail.com
         </h2>
         <div class="container__send">
           <Button
+            data-splitbee-event="Home Mail-link"
             id="send__mail"
             text="→ send me a message"
             type="secondary"
@@ -82,6 +88,7 @@
         <ul class="links">
           <li>
             <Button
+              data-splitbee-event="Home Github"
               text="github, "
               type="third"
               :router="false"
@@ -90,6 +97,7 @@
           </li>
           <li>
             <Button
+              data-splitbee-event="Home Instagram"
               text="instagram, "
               type="third"
               :router="false"
@@ -98,6 +106,7 @@
           </li>
           <li>
             <Button
+              data-splitbee-event="Home Twitter"
               text="twitter,"
               type="third"
               :router="false"
@@ -106,6 +115,7 @@
           </li>
           <li>
             <Button
+              data-splitbee-event="Home 99REFERENCE"
               text="99REFERENCE."
               type="third"
               :router="false"
