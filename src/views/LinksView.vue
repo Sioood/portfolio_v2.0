@@ -13,7 +13,7 @@
         data-splitbee-event="Links Mail"
         text="theodupontpro@gmail.com"
         type="main"
-        :router="true"
+        :router="false"
         link="mailto:theodupontpro@gmail.com?subject=Contact&body="
       />
 
