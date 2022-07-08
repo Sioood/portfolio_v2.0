@@ -4,7 +4,7 @@
       <!-- <router-link to="/">Home</router-link> -->
       <!-- <router-link to="/project/1">Project</router-link> -->
       <a
-        v-if="$route.name !== 'home'"
+        v-if="$route.name !== 'home' && $route.name !== 'links'"
         @click="$router.go(-1)"
         class="links__back"
       >
@@ -34,13 +34,11 @@
 <script>
 import Projects from "@/assets/projects.json";
 import AOS from "aos";
-import "aos/dist/aos.css"; // You can also use <link> for styles
-// ..
+import "aos/dist/aos.css";
+
 AOS.init();
 AOS.refresh();
 
-// You can also pass an optional settings object
-// below listed default settings
 AOS.init({
   // Global settings:
   disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
@@ -83,11 +81,13 @@ export default {
   },
   mounted: function () {
     function logInfo() {
+      /* ----------------------- Log Credits in the console ----------------------- */
       console.log(
         "%c%s",
         "border-radius: 6px; padding: 8px; color: #ffffff; background: #e63b3b;",
         "🧑🏻‍💻 Developed by: Théo Dupont — https://theodupont.ga"
       );
+      /* -------------------------------------------------------------------------- */
     }
     logInfo();
     window.addEventListener("mousemove", () => {
