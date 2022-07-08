@@ -31,7 +31,7 @@
         <h2 class="me__wrapper__text__title" data-aos="fade-down">About me</h2>
         <h5 class="me__wrapper__text__caption" data-aos="fade-down">
           Hello! Je suis <em>Théo</em>, Graphiste & Développeur Front-End,
-          curieux à plein temps, Enfant d'internet je me sert de celui-ci
+          curieux à plein temps, Enfant d'internet je me sert de celui-ci pour
           apprendre et comprendre constamment.
         </h5>
         <div class="me__wrapper__text__citation">

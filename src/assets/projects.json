@@ -15,7 +15,7 @@
           "content": [
             {
               "type": "text",
-              "data": "Projet 7 du parcours développeur web d'OpenClassrooms, l'objectif de celui-ci est de réaliser le back-end et le front-end d'un réseau social d'entreprise. Il se constitue de: </br> - la création d'une base de données SQL avec MySQL,</br> - de la mise en place d'une api CRUD REST basée sur Node.js, Express & Sequelize, </br> - Réalisation d'une maquette et intégration de celle-ci avec Vue.js (Vue, Vue x, Vue router), CSS, </br> - Sécurisation sous les normes RGPD & OWASP, Protection d'authentification, des champs de formulaires.",
+              "data": "Projet 7 du parcours développeur web d'OpenClassrooms, l'objectif de celui-ci est de réaliser le back-end et le front-end d'un réseau social d'entreprise. Il se constitue de: </br> - la création d'une base de données SQL avec MySQL,</br> - la mise en place d'une api CRUD REST basée sur Node.js, Express & Sequelize, </br> - La réalisation d'une maquette et intégration de celle-ci avec Vue.js (Vue, Vue x, Vue router), CSS, </br> - La sécurisation sous les normes RGPD & OWASP, Protection d'authentification, des champs de formulaires.",
               "alt": null
             }
           ]
@@ -144,7 +144,7 @@
       "section": [
         {
           "title": "l'Affiche",
-          "client": " <a target='_blank' href='www.villeneuve-st-germain.fr'>Villeneuve Saint Germain</a> ",
+          "client": " <a target='_blank' href='http://www.villeneuve-st-germain.fr/page-d-accueil/'>Villeneuve Saint Germain</a> ",
           "date": 2019,
           "content": [
             {

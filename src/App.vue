@@ -80,6 +80,9 @@ export default {
     };
   },
   mounted: function () {
+    /* -------------------------------------------------------------------------- */
+    /*          Need to do a property detect safari and display a message         */
+    /* -------------------------------------------------------------------------- */
     function logInfo() {
       /* ----------------------- Log Credits in the console ----------------------- */
       console.log(
@@ -452,6 +455,8 @@ nav {
       }
     }
     img {
+      width: 1rem;
+      height: 1rem;
       // fill: var($--accent-color);
       pointer-events: none;
     }
