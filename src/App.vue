@@ -90,6 +90,7 @@ export default {
         "border-radius: 6px; padding: 8px; color: #ffffff; background: #e63b3b;",
         "🧑🏻‍💻 Developed by: Théo Dupont — https://theodupont.ga"
       );
+
       /* -------------------------------------------------------------------------- */
     }
     logInfo();

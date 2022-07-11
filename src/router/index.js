@@ -26,7 +26,7 @@ const routes = [
   {
     path: "/:catchAll(.*)",
     component: NotFound,
-    // redirect: "/404"
+    // redirect: "/404"    
   },
   {
     path: "/",
@@ -51,7 +51,6 @@ const routes = [
     },
   },
 ];
-
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes,
@@ -64,5 +63,3 @@ const router = createRouter({
     });
   },
 });
-
-export default router;

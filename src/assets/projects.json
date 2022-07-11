@@ -33,14 +33,14 @@
           ]
         },
         {
-          "title": "Page d'acceuil",
+          "title": "Page d'accueil",
           "client": "Projet 7, OpenClassrooms",
           "date": 2022,
           "content": [
             {
               "type": "img",
               "data": "groupomania/home.png",
-              "alt": "Page d'acceuil de groupomania"
+              "alt": "Page d'accueil de groupomania"
             }
           ]
         },
