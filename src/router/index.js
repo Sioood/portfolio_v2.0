@@ -26,7 +26,7 @@ const routes = [
   {
     path: "/:catchAll(.*)",
     component: NotFound,
-    // redirect: "/404"    
+    // redirect: "/404"
   },
   {
     path: "/",
@@ -63,3 +63,5 @@ const router = createRouter({
     });
   },
 });
+
+export default router;
